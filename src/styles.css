@@ -44,7 +44,7 @@ li,
 span,
 p, 
 div {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* focus state */
@@ -116,6 +116,41 @@ h4 {
 
 .mb-40 {
   margin-bottom: 40px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+/* Colors */
+.cl-orange-light {
+  color: #F68C29
+}
+
+.cl-orange-dark {
+  color: #D96E2B
+}
+
+.cl-green {
+  color: #79B152
+}
+
+.cl-green-dark {
+  color: #4C7838
+}
+
+.cl-pink {
+  color: #D5394B
+}
+
+.cl-pink-dark {
+  color: #7F0D4C
+}
+
+/* Button */
+
+.btn {
+  border-radius: .5rem;
 }
 
 @media screen and (max-width: 576px) {
