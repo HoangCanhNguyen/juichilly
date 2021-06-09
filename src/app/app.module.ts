@@ -22,6 +22,12 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { FeaturedProductsComponent } from './product/featured-products/featured-products.component';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
+import { PartnerComponent } from './partner/partner.component';
+import { CollectionComponent } from './collection/collection.component';
+import { MemberComponent } from './member/member.component';
+import { MemberDetailComponent } from './member/member-detail/member-detail.component';
+import { StopPlasticComponent } from './stop-plastic/stop-plastic.component';
+import { PromotionComponent } from './promotion/promotion.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +50,13 @@ import { LayoutComponent } from './layout/layout.component';
     ProductListComponent,
     FeaturedProductsComponent,
     HomeComponent,
-    LayoutComponent
+    LayoutComponent,
+    PartnerComponent,
+    CollectionComponent,
+    MemberComponent,
+    MemberDetailComponent,
+    StopPlasticComponent,
+    PromotionComponent
   ],
   imports: [
     BrowserModule,
