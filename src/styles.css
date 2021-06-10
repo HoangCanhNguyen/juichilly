@@ -133,6 +133,14 @@ h4 {
   padding-bottom: 100px;
 }
 
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
 .mb-25 {
   margin-bottom: 25px;
 }
@@ -188,6 +196,29 @@ h4 {
 }
 .secondary-btn:hover {
   color: white;
+}
+.btn-radius {
+  border-radius: 0.5rem;
+}
+
+.btn-pink-dark {
+  background-color: #7f0d4c;
+}
+
+.btn-orange {
+  background-color: #d96e2b;
+}
+
+.btn-green {
+  background-color: #79b152;
+}
+
+.btn-pink {
+  background-color: #d5394b;
+}
+
+.btn-green-dark {
+  background-color: #4c7838;
 }
 
 @media screen and (max-width: 576px) {

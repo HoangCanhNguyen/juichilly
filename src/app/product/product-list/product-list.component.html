@@ -1,1 +1,10 @@
-<p>product-list works!</p>
+<div class="container">
+  <div class="row text-center">
+    <div class="col-md-4" *ngFor="let product of products">
+      <app-products-rect [product] = "product"></app-products-rect>
+    </div>
+    <div class="col-md-6" *ngFor="let product of products2">
+      <app-products-rect [product] = "product"></app-products-rect>
+    </div>
+  </div>
+</div>

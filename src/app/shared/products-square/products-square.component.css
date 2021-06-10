@@ -1,0 +1,23 @@
+.btn-green {
+  background-color: #79b152;
+}
+
+.btn-orange-light {
+  background-color: #f68c29
+}
+
+.btn-green-dark {
+  background-color: #4c7838;
+}
+
+.product-title {
+  font-size: 1.5rem;
+}
+
+.btn-add {
+  background-color: #79B152;
+}
+
+.bxs-minus-circle, .bxs-plus-circle {
+  font-size: 30px !important;
+}
