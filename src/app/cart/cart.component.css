@@ -1,0 +1,219 @@
+/* style header */
+header {
+  background-color: #fcf2ef;
+  padding: 1rem 0;
+}
+
+header .navigation {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+}
+
+header .navigation button {
+  font-size: 1.5rem;
+  color: var(--orange-light);
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+}
+
+/* style cart empty and order success */
+.same-style {
+  text-align: center;
+}
+
+.same-style h1 {
+  color: var(--red);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.same-style button {
+  font-size: 1.25rem;
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.same-style button i {
+  font-size: 1.5rem;
+}
+
+/* style cart items */
+.items {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #707070;
+}
+
+.cart-items button {
+  font-size: 1.25rem;
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.cart-items button i {
+  font-size: 1.5rem;
+}
+
+/* style billing info */
+h1.title {
+  color: var(--red);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #707070;
+}
+
+form label.form-label {
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+form label.form-label > span {
+  color: var(--red);
+  font-weight: 600;
+}
+
+form input {
+  border-radius: 10px;
+  height: 50px;
+  border: none;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+form textarea {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* style accept terms */
+.accept-terms p {
+  font-weight: 500;
+}
+
+/* custom checkbox */
+.checkbox {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.5em;
+  color: var(--color);
+}
+.checkbox--disabled {
+  color: var(--disabled);
+}
+.checkbox__control {
+  display: inline-grid;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.25em;
+  border: 0.1em solid currentColor;
+}
+.checkbox__control svg {
+  transform: scale(0);
+  transform-origin: bottom left;
+}
+.checkbox__input {
+  cursor: pointer;
+  margin-top: 4px;
+  display: grid;
+  grid-template-areas: "checkbox";
+}
+.checkbox__input > * {
+  grid-area: checkbox;
+}
+.checkbox__input input {
+  opacity: 0;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+
+.checkbox__input input:checked + .checkbox__control {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.checkbox__input input:checked + .checkbox__control svg {
+  transform: scale(1);
+  color: white;
+}
+.checkbox__input input:disabled + .checkbox__control {
+  color: var(--disabled);
+}
+
+span.blue-span {
+  color: var(--blue);
+}
+
+/* style voucher section */
+.voucher input {
+  border: 1px solid #707070;
+  border-radius: 0;
+  border-right: 0;
+}
+
+span#basic-addon2 {
+  background: #ff6200;
+  color: white;
+  border: 1px solid #ff6200;
+  border-radius: 0;
+  padding-inline: 2rem;
+}
+
+/* style payment method */
+input[type="radio"] {
+  cursor: pointer;
+}
+
+.payment-method {
+  border: 1px solid #707070;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="radio"] {
+  height: 1rem;
+  border: 1px solid #707070;
+  box-shadow: none;
+  margin-left: 0;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.payment-method .form-check {
+  padding: 1.5rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid #707070;
+}
+
+.payment-method .form-check label {
+  font-weight: 500;
+}
+
+.payment-method .method-desc {
+  padding: 1.5rem;
+}
+
+.payment-method .method-desc p.note {
+  color: #ff0000;
+}
+
+/* style total */
+.total {
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: 500;
+  justify-content: space-between;
+}
+
+.place-order-btn {
+  background: #ff6200;
+  color: white;
+  height: 50px;
+  border-radius: 5px;
+  font-weight: 500;
+}

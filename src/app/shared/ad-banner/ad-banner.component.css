@@ -9,7 +9,8 @@
 }
 
 .ad-banner-main .description h1 {
-  width: min(500px, 100%);
+  width: min(550px, 100%);
+  font-size: 3rem;
 }
 
 .ad-banner-main .hero-img {
