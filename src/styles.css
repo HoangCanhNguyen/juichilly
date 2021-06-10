@@ -6,6 +6,15 @@
   cursor: not-allowed;
 }
 
+:root {
+  --orange-light: #f68c29;
+  --orange-dark: #d96e2b;
+  --green: #79b152;
+  --green-dark: #4c7838;
+  --pink: #d5394b;
+  --pink-dark: #7f0d4c;
+}
+
 body,
 html {
   max-width: 100vw;
@@ -35,16 +44,19 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0;
 }
 
 a,
 button,
 li,
 span,
-p, 
+p,
 div {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* focus state */
@@ -74,10 +86,17 @@ ul {
   margin: 0;
 }
 
-/* links styles */
+/* buttons and links hover state styles */
 a:focus,
 a:hover {
   text-decoration: none;
+  color: initial !important;
+}
+
+button:focus,
+button:hover {
+  text-decoration: none;
+  color: inherit !important;
 }
 
 /* responsive font size using clamp() */
@@ -124,33 +143,40 @@ h4 {
 
 /* Colors */
 .cl-orange-light {
-  color: #F68C29
+  color: #f68c29;
 }
 
 .cl-orange-dark {
-  color: #D96E2B
+  color: #d96e2b;
 }
 
 .cl-green {
-  color: #79B152
+  color: #79b152;
 }
 
 .cl-green-dark {
-  color: #4C7838
+  color: #4c7838;
 }
 
 .cl-pink {
-  color: #D5394B
+  color: #d5394b;
 }
 
 .cl-pink-dark {
-  color: #7F0D4C
+  color: #7f0d4c;
 }
 
 /* Button */
 
 .btn {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
+}
+
+.secondary-btn {
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 0.8rem 1.6rem;
 }
 
 @media screen and (max-width: 576px) {
