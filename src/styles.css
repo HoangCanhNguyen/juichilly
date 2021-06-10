@@ -11,13 +11,16 @@
   --orange-dark: #d96e2b;
   --green: #79b152;
   --green-dark: #4c7838;
-  --pink: #d5394b;
-  --pink-dark: #7f0d4c;
+  --red: #ff6200;
+  --brown-light: #d5394b;
+  --brown-dark: #7f0d4c;
+  --blue: #5799f2;
 }
 
 body,
 html {
   max-width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -64,9 +67,9 @@ img:focus,
 li:focus,
 i:focus,
 button:focus,
-select:focus,
+/* select:focus,
 input:focus,
-textarea:focus,
+textarea:focus, */
 div:focus,
 h1:focus,
 h2:focus,
@@ -76,6 +79,11 @@ h5:focus,
 h6:focus,
 span:focus,
 p:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-check-input:focus {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -90,13 +98,13 @@ ul {
 a:focus,
 a:hover {
   text-decoration: none;
-  color: initial !important;
+  /* color: inherit !important; */
 }
 
 button:focus,
 button:hover {
   text-decoration: none;
-  color: inherit !important;
+  /* color: inherit !important; */
 }
 
 /* responsive font size using clamp() */
@@ -177,6 +185,9 @@ h4 {
   border-radius: 10px;
   border: 1px solid white;
   padding: 0.8rem 1.6rem;
+}
+.secondary-btn:hover {
+  color: white;
 }
 
 @media screen and (max-width: 576px) {

@@ -1,0 +1,28 @@
+.blog-list h1 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  color: var(--brown-dark);
+}
+
+.blog {
+  display: flex;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+}
+
+.blog:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.blog .blog-thumbnail img {
+  width: 200px;
+}
+
+.blog .blog-title {
+  cursor: pointer;
+  padding-left: 2rem;
+  color: var(--brown-dark);
+}

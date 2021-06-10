@@ -1,1 +1,31 @@
-<p>blog-list works!</p>
+<section class="blog-list">
+  <img src="../../../assets/blog/blog-list-banner.jpg" class="img-fluid" />
+  <div class="container pt-100 pb-100">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <h1 class="text-center">Blog</h1>
+
+        <ng-container *ngFor="let data of blogData">
+          <ng-container
+            [ngTemplateOutlet]="blog"
+            [ngTemplateOutletContext]="{
+              title: data.title,
+              thumbUrl: data.thumbUrl
+            }"
+          ></ng-container>
+        </ng-container>
+
+        <ng-template #blog let-thumbUrl="thumbUrl" let-title="title">
+          <div class="blog">
+            <div class="blog-thumbnail">
+              <img [src]="thumbUrl" />
+            </div>
+            <div class="blog-title">
+              <h3>{{ title }}</h3>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>

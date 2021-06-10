@@ -1,1 +1,241 @@
-<p>cart works!</p>
+<header>
+  <div class="container">
+    <div class="navigation">
+      <button class="btn">
+        <i class="bx bx-chevron-left mr-2"></i>Tiếp tục mua sắm
+      </button>
+
+      <div class="logo text-center">
+        <img src="../../assets/Juichilly-logo.png" alt="logo" />
+      </div>
+
+      <div class="cart-icon text-end">
+        <img src="../../assets/cart/cart-icon.png" alt="cart" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <ng-template #emptyCart>
+      <div class="empty-cart same-style pt-100 pb-100">
+        <h1>Giỏ hàng hiện đang trống</h1>
+        <button class="btn">
+          <i class="bx bx-chevron-left mr-2"></i>Tiếp tục mua sắm
+        </button>
+      </div>
+    </ng-template>
+
+    <ng-template #orderSuccess>
+      <div class="order-success same-style pt-100 pb-100">
+        <h1>Đặt hàng thành công !</h1>
+        <button class="btn">
+          <i class="bx bx-chevron-left mr-2"></i>Tiếp tục mua sắm
+        </button>
+      </div>
+    </ng-template>
+
+    <ng-template #billingInfo>
+      <div class="container pt-100 pb-100">
+        <div class="row">
+          <div class="col-lg-6 pe-5">
+            <div class="cart-items">
+              <h1 class="title">Giỏ hàng (1 sản phẩm)</h1>
+
+              <div class="items">All items in your cart is here</div>
+
+              <button class="btn p-0 d-flex align-items-center">
+                <i class="bx bx-chevron-left mr-2"></i>Tiếp tục mua sắm
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="shipping-payment">
+              <h1 class="title">Địa chỉ giao hàng</h1>
+              <form>
+                <div class="mb-4">
+                  <label for="name" class="form-label"
+                    >Họ tên <span>*</span></label
+                  >
+                  <input type="text" class="form-control" id="name" />
+                </div>
+
+                <div class="mb-4">
+                  <label for="email" class="form-label"
+                    >Email <span>*</span></label
+                  >
+                  <input type="email" class="form-control" id="email" />
+                </div>
+
+                <div class="mb-4">
+                  <label for="phone" class="form-label"
+                    >Số điện thoại <span>*</span></label
+                  >
+                  <input type="text" class="form-control" id="phone" />
+                </div>
+
+                <div class="mb-5">
+                  <label for="address" class="form-label"
+                    >Địa chỉ của bạn? <span>*</span></label
+                  >
+                  <textarea
+                    name="address"
+                    id="address"
+                    rows="5"
+                    class="form-control"
+                  ></textarea>
+                </div>
+
+                <div class="mb-5 accept-terms">
+                  <p>
+                    Chỉ cần tích vào các ô bên dưới, bạn sẽ nhận được những
+                    chương trình ưu đãi hấp dẫn dành riêng cho khách hàng
+                    Juichilly
+                  </p>
+
+                  <label class="checkbox mb-3">
+                    <span class="checkbox__input">
+                      <input type="checkbox" name="checkbox" />
+                      <span class="checkbox__control">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            d="M1.73 12.91l6.37 6.37L22.79 4.59"
+                          />
+                        </svg>
+                      </span>
+                    </span>
+                    <span class="radio__label"
+                      >Tôi đồng ý với các
+                      <span class="blue-span"
+                        >Điều Khoản Sử Dụng, Chính Sách Bảo Mật và Chính Sách
+                        Cookies</span
+                      >
+                      của Juichilly*</span
+                    >
+                  </label>
+
+                  <label class="checkbox">
+                    <span class="checkbox__input">
+                      <input type="checkbox" name="checkbox" />
+                      <span class="checkbox__control">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                          focusable="false"
+                        >
+                          <path
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="3"
+                            d="M1.73 12.91l6.37 6.37L22.79 4.59"
+                          />
+                        </svg>
+                      </span>
+                    </span>
+                    <span class="radio__label"
+                      >Tôi muốn nhận các thông tin khuyến mãi & tư vấn về nước
+                      uống và sức khỏe Của Juichilly</span
+                    >
+                  </label>
+                </div>
+
+                <div class="mb-5 voucher">
+                  <div class="input-group mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Mã khuyễn mại / giảm giá"
+                      aria-label="Recipient's username"
+                      aria-describedby="basic-addon2"
+                    />
+                    <span class="input-group-text" id="basic-addon2"
+                      >Áp dụng</span
+                    >
+                  </div>
+                </div>
+
+                <div class="mb-4 payment">
+                  <div class="payment-method cod mb-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radio"
+                        id="cod"
+                      />
+                      <label class="form-check-label" for="cod">
+                        Thanh toán khi nhận hàng (COD)
+                      </label>
+                    </div>
+                    <div class="method-desc">
+                      Áp dụng cho khách hàng khi gọi nước tại nhà riêng
+                    </div>
+                  </div>
+
+                  <div class="payment-method banking">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radio"
+                        id="banking"
+                      />
+                      <label class="form-check-label" for="banking">
+                        Chuyển khoản qua ngân hàng
+                      </label>
+                    </div>
+                    <div class="method-desc">
+                      <p class="note">
+                        *Lưu ý: Trước khi chuyển khoản, vui lòng gọi điện thoại
+                        đến Hotline 097 111 2222 để được hướng dẫn chi tiết về
+                        nội dung và cách thức thanh toán
+                      </p>
+                      <p class="mb-1">Số tài khoản: 123456789</p>
+                      <p class="mb-1">Tên chủ tài khoản: CONG TY JUICHILLY</p>
+                      <p class="mb-1">Tên ngân hàng: Techcombank</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4 total">
+                  <span>Tổng cộng:</span>
+
+                  <span>50.000 VNĐ</span>
+                </div>
+
+                <button type="submit" class="btn place-order-btn w-100 mb-3">
+                  HOÀN TẤT ĐẶT HÀNG
+                </button>
+
+                <p class="text-center">
+                  Bằng cách bấm nút
+                  <span class="blue-span">Hoàn tất đặt hàng</span>, bạn đã đồng
+                  ý với
+                  <span class="blue-span">Quy định và Chính sách</span> của
+                  chúng tôi!
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-container [ngTemplateOutlet]="emptyCart"></ng-container>
+    <ng-container [ngTemplateOutlet]="billingInfo"></ng-container>
+    <ng-container [ngTemplateOutlet]="orderSuccess"></ng-container>
+  </div>
+</main>
+
+<app-footer></app-footer>
