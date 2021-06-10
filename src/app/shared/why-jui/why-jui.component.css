@@ -1,0 +1,26 @@
+/* .why-jui-wrapper .description {
+  margin-bottom: ;
+} */
+
+.why-jui-wrapper .description h1 {
+  color: var(--orange-light);
+}
+
+.why-jui-wrapper .description p {
+  font-size: 1.25rem;
+  margin-inline: auto;
+  margin-bottom: 0;
+  width: min(580px, 100%);
+}
+
+.why-jui-wrapper .reasons .reason-block p {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 576px) {
+  .why-jui-wrapper .description p,
+  .why-jui-wrapper .reasons .reason-block p {
+    font-size: 1rem;
+  }
+}

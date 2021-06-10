@@ -1,0 +1,43 @@
+.ad-banner-main {
+  background-color: var(--orange-light);
+  border-radius: 20px;
+  color: white;
+}
+
+.ad-banner-main .description {
+  padding-left: 5rem;
+}
+
+.ad-banner-main .description h1 {
+  width: min(500px, 100%);
+}
+
+.ad-banner-main .hero-img {
+  padding-top: 6rem;
+}
+
+@media (max-width: 1200px) {
+  .ad-banner-main .description {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .ad-banner-main .hero-img {
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .ad-banner-main .description {
+    padding: 2rem;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .ad-banner-main .description {
+    padding: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+}
