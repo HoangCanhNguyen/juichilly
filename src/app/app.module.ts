@@ -56,7 +56,7 @@ import { PromotionComponent } from './promotion/promotion.component';
     MemberComponent,
     MemberDetailComponent,
     StopPlasticComponent,
-    PromotionComponent
+    PromotionComponent,
   ],
   imports: [
     BrowserModule,
