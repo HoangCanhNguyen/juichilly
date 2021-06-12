@@ -1,9 +1,15 @@
+.add-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .btn-green {
   background-color: #79b152;
 }
 
 .btn-orange-light {
-  background-color: #f68c29
+  background-color: #f68c29;
 }
 
 .btn-green-dark {
@@ -15,9 +21,10 @@
 }
 
 .btn-add {
-  background-color: #79B152;
+  background-color: #79b152;
 }
 
-.bxs-minus-circle, .bxs-plus-circle {
+.bxs-minus-circle,
+.bxs-plus-circle {
   font-size: 30px !important;
 }

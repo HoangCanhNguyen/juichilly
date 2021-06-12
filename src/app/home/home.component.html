@@ -1,12 +1,262 @@
-<p>home works!</p>
-<!-- <app-ad-banner></app-ad-banner> -->
+<!-- juichilly-intro-banner -->
+<section class="juichilly-intro-banner pb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 align-self-center">
+        <div class="banner-content">
+          <h1 class="banner-title">Juichilly</h1>
+          <p>
+            Được làm nguyên chất, thuần khiết, không pha tạp và được tạo ra để
+            cải thiện sức khỏe.
+            <br />
+            Bạn đã bao giờ uống nước ép <br />
+            <span>Thật. Đúng cách ?</span>
+          </p>
+          <button class="btn primary-btn">Xem video</button>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="banner-hero-img">
+          <img src="../../assets/home/home-hero-img-1.png" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- juichilly-about-banner -->
+<section class="juichilly-about-banner pt-100 pb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="banner-hero-img">
+          <img src="../../assets/home/home-hero-img-2.png" class="img-fluid" />
+        </div>
+      </div>
+
+      <div class="col-lg-5 align-self-center">
+        <div class="banner-content">
+          <h1 class="banner-title">Juichilly</h1>
+          <h3 class="sub-title">Về chúng tôi</h3>
+          <p>
+            Juichilly hình thành từ 2013, là một đội ngũ trẻ đam mê ẩm thực và
+            đặc biệt luôn có tình yêu mãnh liệt bởi các thức uống, món ăn ngon –
+            an toàn từ Trái cây tươi. Chúng tôi mang lại những sản phẩm từ nông
+            sản chất lượng, ưu tiên hàng Việt và chỉ sử dụng các loại ngoại nhập
+            từ nhà nhập khẩu uy tín nhất để phục vụ khách hàng với giá trị THẬT:
+            chất lượng, tươi ngon và an toàn.
+          </p>
+          <button class="btn primary-btn">
+            <img src="../../assets/home/arrow-right-icon.svg" class="me-2" />
+            Đọc thêm
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- why-jui -->
+<section class="why-jui pt-100 pb-100">
+  <app-why-jui></app-why-jui>
+</section>
+
+<!-- slide show -->
+<section class="slide-show pt-100 pb-100">
+  <img
+    src="../../assets/home/slide-show-topleft-decor.png"
+    class="decor decor--topleft"
+  />
+  <img
+    src="../../assets/home/slide-show-bottomright-decor.png"
+    class="decor decor--bottomright"
+  />
+
+  <swiper
+    [slidesPerView]="3"
+    [spaceBetween]="20"
+    [navigation]="true"
+    [autoplay]="{
+      delay: 3000,
+      disableOnInteraction: false
+    }"
+  >
+    <ng-template swiperSlide *ngFor="let img of slideShowImages">
+      <img [src]="img" class="w-100" />
+    </ng-template>
+  </swiper>
+</section>
+
+<!-- featured products -->
+<section class="featured-products pt-100 pb-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <div class="description text-center">
+          <h1 class="section-title">Sản phẩm nổi bật</h1>
+          <h3 class="mb-2 sub-title">Hương vị yêu thích của bạn</h3>
+          <p class="mb-60">
+            Juichilly là hỗn hợp nước trái cây sạch 100% được làm thủ công một
+            cách chuyên nghiệp. Chúng tôi sử dụng những thành phần lành mạnh và
+            tốt cho sức khỏe, bổ sung các loại vitamin và chất dinh dưỡng cho
+            mọi độ tuổi, mọi đối tượng khách hàng. Juichilly là một phần không
+            thể thiếu trong chuyến phiêu lưu khám phá con đường ẩm thực dành cho
+            riêng bạn!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-products-square></app-products-square>
+</section>
+
+<!-- customer testi -->
+<section class="customer-testi pt-100 pb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 align-self-center">
+        <div class="section-desc">
+          <h1 class="section-title">Câu chuyện của chúng tôi</h1>
+          <h3 class="sub-title">Khách hàng của Juichilly nói gì</h3>
+          <p class="mb-3">
+            Đánh giá trực tiếp từ các khách hàng của chúng tôi đối với sản phẩm
+          </p>
+          <button class="btn secondary-btn btn--orange">Liên hệ</button>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="customer-testi-main">
+          <swiper
+            [autoplay]="{
+              delay: 5000,
+              disableOnInteraction: false
+            }"
+          >
+            <ng-template swiperSlide *ngFor="let testi of customerTesti">
+              <div class="customer-testi-block">
+                <img [src]="testi.avatar" class="mb-25" />
+                <h3>{{ testi.name }}</h3>
+                <h4>{{ testi.professional }}</h4>
+                <p class="mb-0">{{ testi.content }}</p>
+              </div>
+            </ng-template>
+          </swiper>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- testimonials from community -->
+<section class="community-testi pt-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <div class="description text-center">
+          <h1 class="section-title">Cộng đồng yêu Juichilly</h1>
+          <p>
+            Bạn có tin cuộc sống của mình sẽ thay đổi từ những thói quen nhỏ bé?
+            Bằng chính sự thay đổi của bản thân và những thói quen tích cực chứ
+            không phải từ một ai hay điều gì tác động. Có một cộng đồng như thế!
+            Với Juicing & Yoga đã và đang truyền cảm hứng cho nhau. Để khỏe mạnh
+            hơn và thấy cuộc sống thú vị, đầy màu sắc! Hãy nghe chia sẻ từ những
+            con người và những câu chuyện thật mà chúng mình đồng hành và vun
+            đắp từng chút một.
+          </p>
+        </div>
+
+        <div class="testi-wrapper">
+          <swiper
+            [autoplay]="{
+              delay: 15000,
+              disableOnInteraction: false
+            }"
+          >
+            <ng-template swiperSlide *ngFor="let testi of testimonials">
+              <div class="testi">
+                <p class="testi-content">
+                  <i class="bx bxs-quote-alt-left"></i> {{ testi.content }}
+                </p>
+                <h5 class="text-end">{{ testi.commentor }}</h5>
+                <p class="text-end">{{ testi.briefDesc }}</p>
+              </div>
+            </ng-template>
+          </swiper>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ad banner -->
+<section class="ad-banner pt-100 pb-100">
+  <app-ad-banner></app-ad-banner>
+</section>
+
+<!-- juichilly ingredients -->
+<section class="juichilly-ingredients text-center pb-100">
+  <h1 class="section-title">Thành phần</h1>
+  <h2 class="sub-title">Có gì bên trong Juichilly?</h2>
+  <p>Cùng tìm hiểu sản phẩm của chúng tôi nhé</p>
+  <div class="img-wrapper d-inline-block">
+    <img src="../../assets/home/orange-juice.jpg" class="center" />
+
+    <div class="ingredient left-top">
+      <img src="../../assets/home/magnesium.png" />
+      <p>Magnesium</p>
+    </div>
+
+    <div class="ingredient left-center">
+      <img src="../../assets/home/vitamin.png" />
+      <p>Vitamin C</p>
+    </div>
+
+    <div class="ingredient left-bottom">
+      <img src="../../assets/home/vitamin-A.png" />
+      <p>Vitamin A</p>
+    </div>
+
+    <div class="ingredient right-top">
+      <img src="../../assets/home/thiamine.png" />
+      <p>Thiamine</p>
+    </div>
+
+    <div class="ingredient right-center">
+      <img src="../../assets/home/magnesium-2.png" />
+      <p>Magnesium</p>
+    </div>
+
+    <div class="ingredient right-bottom">
+      <img src="../../assets/home/vitamin-b6.png" />
+      <p>Vitamin B6</p>
+    </div>
+  </div>
+</section>
+
+<!-- order now call to action banner -->
+<section class="order-now pt-100 pb-100">
+  <div class="container h-100">
+    <div class="row justify-content-end h-100">
+      <div class="col-lg-6 align-self-center">
+        <h1>Liệu pháp tự nhiên cải thiện sức khỏe</h1>
+        <p>
+          Bạn sẽ lựa chọn đồ uống nào tốt nhất cho sức khỏe? Nước ép là cách
+          nhanh nhất để cải thiện tỉ lệ dinh dưỡng từ thực vật trong chế độ ăn
+          uống, và nuôi dưỡng, chữa lành tốt nhất cho cơ thể một cách tự nhiên
+          từ gốc rễ. Gọi ngay cho True Juice để được tư vấn chế độ phù hợp cải
+          thiện sức khỏe ngay bây giờ nhé!
+        </p>
+        <button class="btn order-now-btn">Đặt hàng ngay</button>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- <app-top-banner
   [bannerTitle]="'Bộ sưu tập'"
   [heroImgUrl]="'../../assets/top-banner-images/orange-hero-img.png'"
   [heroImgPosition]="'top'"
 ></app-top-banner> -->
-
-<!-- <app-why-jui></app-why-jui> -->
-
-<app-products-square></app-products-square>
