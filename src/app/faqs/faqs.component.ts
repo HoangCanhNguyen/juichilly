@@ -13,7 +13,6 @@ export class FaqsComponent implements OnInit {
     const container = document.querySelector('.container');
     const adBanner = document.querySelector('.ad-banner') as any;
     adBanner.style.marginTop = container.clientHeight - 350 + 'px';
-    console.log(container.clientHeight);
   }
 
 }
