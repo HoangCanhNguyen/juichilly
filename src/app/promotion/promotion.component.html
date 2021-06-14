@@ -1,1 +1,62 @@
-<p>promotion works!</p>
+<app-top-banner
+  [bannerTitle]="'Khuyễn mãi'"
+  [heroImgUrl]="'../../assets/promotion/promotion-hero-img.png'"
+  [heroImgPosition]="'bottom'"
+  [bannerHeight]="530"
+></app-top-banner>
+
+<section class="promo-list pt-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <h1 class="text-center section-title">
+          Các chương trình khuyến mãi tại Juichilly
+        </h1>
+
+        <ng-container *ngFor="let promotion of promoData">
+          <ng-container
+            [ngTemplateOutlet]="promo"
+            [ngTemplateOutletContext]="{
+              title: promotion.title,
+              thumbUrl: promotion.thumbUrl,
+              p1: promotion.p1,
+              p2: promotion.p2,
+              p3: promotion.p3
+            }"
+          ></ng-container>
+        </ng-container>
+
+        <ng-template
+          #promo
+          let-thumbUrl="thumbUrl"
+          let-title="title"
+          let-p1="p1"
+          let-p2="p2"
+          let-p3="p3"
+        >
+          <div class="promo">
+            <div class="promo-thumbnail">
+              <img [src]="thumbUrl" />
+            </div>
+            <div class="promo-title">
+              <h3>{{ title }}</h3>
+              <p *ngIf="p1">{{ p1 }}</p>
+              <p *ngIf="p2">{{ p2 }}</p>
+              <p *ngIf="p3">{{ p3 }}</p>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ad banner -->
+<section class="ad-banner pt-100 pb-100">
+  <app-ad-banner></app-ad-banner>
+</section>
+
+<!-- why-jui -->
+<section class="why-jui pb-100">
+  <app-why-jui></app-why-jui>
+</section>

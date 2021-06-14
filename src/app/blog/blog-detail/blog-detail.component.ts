@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-blog-detail',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogDetailComponent implements OnInit {
 
-  constructor() { }
+  blogId: string;
+
+  constructor(private activedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activedRoute.params.subscribe(params => {
+      this.blogId = params['title']
+    });
   }
 
 }

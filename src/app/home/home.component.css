@@ -4,11 +4,6 @@ h1.banner-title {
   color: var(--orange-light);
 }
 
-.sub-title {
-  font-weight: 500;
-  font-family: "Roboto", sans-serif;
-}
-
 /* style juichilly-intro-banner */
 .juichilly-intro-banner .banner-content p {
   font-size: 1.25rem;
@@ -20,6 +15,7 @@ h1.banner-title {
   font-style: italic;
   font-weight: 500;
   color: var(--orange-light);
+  font-family: "Lora", serif;
 }
 
 /* style juichilly-about-banner */
@@ -40,12 +36,6 @@ h1.banner-title {
 }
 
 /* style juichilly ingredients */
-h1.section-title {
-  color: var(--orange-light);
-  margin-bottom: 1rem;
-  font-size: 3rem;
-}
-
 .juichilly-ingredients h2 {
   margin-bottom: 10px;
 }
@@ -113,6 +103,14 @@ h1.section-title {
   margin-bottom: 2.5rem;
 }
 
+.order-now span {
+  color: red;
+  font-weight: 500;
+  margin-left: 1rem;
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+
 button.order-now-btn {
   border-radius: 10px;
   background-color: white;
@@ -176,6 +174,7 @@ img.decor.decor--bottomright {
 
 .testi .testi-content {
   font-style: italic;
+  font-weight: 500;
 }
 
 .testi .testi-content i {

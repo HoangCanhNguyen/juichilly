@@ -1,0 +1,39 @@
+.left-content {
+  padding-right: 3rem;
+  border-right: 1px solid #7070703a;
+}
+
+.left-content p {
+  text-align: justify;
+  word-break: break-word;
+}
+
+h3.sub-title {
+  text-align: center;
+  color: var(--orange-light);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--orange-light);
+}
+
+.right-content {
+  padding-left: 1rem;
+}
+
+.block-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.block-info i {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  color: var(--orange-light);
+}
+
+.block-info span {
+  font-weight: 500;
+  color: #707070;
+  font-size: 1.125rem;
+}

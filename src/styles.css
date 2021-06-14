@@ -52,7 +52,18 @@ h6 {
   font-family: "Lora", serif;
   font-weight: 600;
   line-height: 1.3;
-  margin-bottom: 0;
+  color: #4a4646;
+}
+
+p,
+span {
+  color: #707070;
+}
+
+p.post-paragraph {
+  margin-bottom: 0.5rem;
+  text-align: justify;
+  word-break: break-word;
 }
 
 a,
@@ -258,6 +269,18 @@ p {
 .swiper-button-next {
   color: white;
 }
+
+/* style section title */
+h1.section-title {
+  color: var(--orange-light);
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+/* .sub-title {
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+} */
 
 @media screen and (max-width: 576px) {
   h1 {

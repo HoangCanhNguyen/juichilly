@@ -14,8 +14,9 @@
 }
 
 .why-jui-wrapper .reasons .reason-block p {
-  font-weight: 500;
-  font-size: 1.125rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  font-family: "Lora", serif;
 }
 
 @media (max-width: 576px) {
