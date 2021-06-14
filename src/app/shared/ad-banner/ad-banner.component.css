@@ -11,6 +11,11 @@
 .ad-banner-main .description h1 {
   width: min(550px, 100%);
   font-size: 3rem;
+  color: white;
+}
+
+.ad-banner-main .description p {
+  color: white;
 }
 
 .ad-banner-main .hero-img {

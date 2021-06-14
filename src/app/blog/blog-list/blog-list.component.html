@@ -10,18 +10,24 @@
             [ngTemplateOutlet]="blog"
             [ngTemplateOutletContext]="{
               title: data.title,
-              thumbUrl: data.thumbUrl
+              thumbUrl: data.thumbUrl,
+              blogId: data.blogId
             }"
           ></ng-container>
         </ng-container>
 
-        <ng-template #blog let-thumbUrl="thumbUrl" let-title="title">
+        <ng-template
+          #blog
+          let-thumbUrl="thumbUrl"
+          let-title="title"
+          let-blogId="blogId"
+        >
           <div class="blog">
             <div class="blog-thumbnail">
               <img [src]="thumbUrl" />
             </div>
             <div class="blog-title">
-              <h3>{{ title }}</h3>
+              <h3 [routerLink]="blogId">{{ title }}</h3>
             </div>
           </div>
         </ng-template>

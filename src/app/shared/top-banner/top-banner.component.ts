@@ -9,6 +9,7 @@ export class TopBannerComponent implements OnInit {
 
   @Input() heroImgUrl: string;
   @Input() bannerTitle: string;
+  @Input() bannerHeight: number;
   @Input() heroImgPosition: string;
 
   constructor() { }

@@ -1,0 +1,19 @@
+.main-content {
+  background-color: #fbfaee;
+}
+
+.actions-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  column-gap: 2rem;
+}
+
+.actions-wrapper .action {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 600;
+  font-family: "Lora", serif;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  background-color: #76a59a;
+}

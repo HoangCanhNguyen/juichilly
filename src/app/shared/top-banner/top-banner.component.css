@@ -6,10 +6,15 @@
 
 .top-banner-wrapper h1 {
   color: white;
-  line-height: 400px;
+  line-height: 100%;
   padding-left: 6rem;
   width: 50%;
+  text-align: center;
   font-size: 7rem !important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .top-banner-wrapper img {

@@ -1,0 +1,37 @@
+h1.section-title {
+  width: min(700px, 100%);
+  margin-inline: auto;
+  margin-bottom: 4rem;
+}
+
+.promo {
+  display: flex;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+}
+
+.promo:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.promo .promo-thumbnail img {
+  width: 200px;
+}
+
+.promo .promo-title {
+  padding-left: 2rem;
+  align-self: center;
+}
+
+.promo .promo-title h3 {
+  cursor: pointer;
+  color: #2d8326;
+  margin-bottom: 1rem;
+}
+
+.promo .promo-title p {
+  margin-bottom: 0.5rem;
+}
