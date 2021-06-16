@@ -5,7 +5,7 @@
 .nav-link {
   color: #FA7C43 !important;
   margin-right: 2rem !important;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .nav-item:hover {
@@ -23,7 +23,13 @@
   display: block;
   margin-top: 0; 
   cursor: pointer;
-  color: blue
 }
 
-.dropdown-menu {}
+.dropdown-item {
+  padding: 0.75rem;
+  font-size:20px
+}
+
+.dropdown-item:hover {
+  color: #7f0d4c !important
+}
