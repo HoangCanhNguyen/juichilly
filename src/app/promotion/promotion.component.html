@@ -1,16 +1,25 @@
-<app-top-banner
+<!-- <app-top-banner
   [bannerTitle]="'Khuyễn mãi'"
   [heroImgUrl]="'../../assets/promotion/promotion-hero-img.png'"
   [heroImgPosition]="'bottom'"
   [bannerHeight]="530"
-></app-top-banner>
+></app-top-banner> -->
+
+<section class="top-banner-wrapper">
+  <h1>Khuyễn mãi</h1>
+  <img
+    src="../../assets/promotion/promotion-hero-img.png"
+    alt="Khuyễn mãi"
+    class="bottom"
+  />
+</section>
 
 <section class="promo-list pt-100">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-8">
+      <div class="col-lg-8">
         <h1 class="text-center section-title">
-          Các chương trình khuyến mãi tại Juichilly
+          Chương trình khuyến mãi tại Juichilly
         </h1>
 
         <ng-container *ngFor="let promotion of promoData">
@@ -53,7 +62,9 @@
 
 <!-- ad banner -->
 <section class="ad-banner pt-100 pb-100">
-  <app-ad-banner></app-ad-banner>
+  <div class="container">
+    <app-ad-banner></app-ad-banner>
+  </div>
 </section>
 
 <!-- why-jui -->

@@ -25,3 +25,9 @@
 .categories p {
   margin-bottom: 0;
 }
+
+@media (max-width: 576px) {
+  .search-box {
+    margin-bottom: 1rem;
+  }
+}

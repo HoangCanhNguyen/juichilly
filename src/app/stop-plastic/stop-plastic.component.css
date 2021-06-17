@@ -3,8 +3,7 @@
 }
 
 .actions-wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: flex;
   column-gap: 2rem;
 }
 
@@ -16,4 +15,32 @@
   text-transform: uppercase;
   padding: 1rem 1.5rem;
   background-color: #76a59a;
+  flex-basis: 100%;
+}
+
+@media (max-width: 576px) {
+  .text-center {
+    text-align: left !important;
+  }
+
+  .actions-wrapper {
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    justify-content: center;
+  }
+
+  .actions-wrapper .action {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    flex-basis: unset;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .actions-wrapper .action:nth-child(4),
+  .actions-wrapper .action:nth-child(5) {
+    flex-grow: unset;
+    width: 40%;
+  }
 }

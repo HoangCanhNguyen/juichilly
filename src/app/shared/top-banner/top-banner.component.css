@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0;
 }
 
 .top-banner-wrapper img {
@@ -30,4 +31,33 @@
 .top-banner-wrapper img.bottom {
   bottom: 0;
   right: 0;
+}
+
+@media (max-width: 576px) {
+  .top-banner-wrapper {
+    /* style 1 */
+    /* height: 230px; */
+
+    /* style 2 */
+    height: 120px;
+  }
+
+  .top-banner-wrapper img {
+    max-width: 65%;
+  }
+
+  .top-banner-wrapper h1 {
+    /* style 1 */
+    /* width: 100%;
+    padding-left: 0;
+    font-size: 3rem !important;
+    align-items: flex-start;
+    padding-top: 2rem; */
+
+    /* style 2 */
+    width: 100%;
+    padding-left: 1rem;
+    font-size: 2rem !important;
+    justify-content: flex-start;
+  }
 }

@@ -285,22 +285,22 @@ h1.section-title {
 @media screen and (max-width: 576px) {
   h1 {
     /* h1 becomes h2 - 32px*/
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   h2 {
     /* h2 becomes h3 - 28px*/
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   h3 {
     /* h3 becomes h4 - 24px */
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   h4 {
     /* h4 becomes h5 - 20px */
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
   h5 {
@@ -316,6 +316,18 @@ h1.section-title {
 
   span,
   button {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .pt-100 {
+    padding-top: 2.5rem;
+  }
+
+  .pb-100 {
+    padding-bottom: 2.5rem;
+  }
+
+  h1.section-title {
+    font-size: 1.7rem;
   }
 }

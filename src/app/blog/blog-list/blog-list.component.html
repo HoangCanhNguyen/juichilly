@@ -2,7 +2,7 @@
   <img src="../../../assets/blog/blog-list-banner.jpg" class="img-fluid" />
   <div class="container pt-100 pb-100">
     <div class="row justify-content-center">
-      <div class="col-8">
+      <div class="col-lg-8">
         <h1 class="text-center">Blog</h1>
 
         <ng-container *ngFor="let data of blogData">
@@ -27,7 +27,7 @@
               <img [src]="thumbUrl" />
             </div>
             <div class="blog-title">
-              <h3 [routerLink]="blogId">{{ title }}</h3>
+              <h3 [routerLink]="blogId" class="mb-0">{{ title }}</h3>
             </div>
           </div>
         </ng-template>
