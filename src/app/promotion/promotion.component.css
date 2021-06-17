@@ -35,3 +35,72 @@ h1.section-title {
 .promo .promo-title p {
   margin-bottom: 0.5rem;
 }
+
+/* style top-banner */
+.top-banner-wrapper {
+  background-color: var(--orange-light);
+  position: relative;
+  height: 530px;
+}
+
+.top-banner-wrapper h1 {
+  color: white;
+  line-height: 100%;
+  padding-left: 6rem;
+  width: 50%;
+  text-align: center;
+  font-size: 7rem !important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.top-banner-wrapper img {
+  max-width: 100%;
+  position: absolute;
+}
+
+.top-banner-wrapper img.top {
+  top: 0;
+  right: 0;
+}
+
+.top-banner-wrapper img.bottom {
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 576px) {
+  .promo .promo-thumbnail {
+    align-self: center;
+  }
+
+  .promo .promo-thumbnail img {
+    width: 100px;
+  }
+
+  .promo .promo-title {
+    padding-left: 1rem;
+  }
+
+  h1.section-title {
+    margin-bottom: 2rem;
+  }
+
+  .top-banner-wrapper {
+    height: 120px;
+  }
+
+  .top-banner-wrapper img {
+    max-width: 48%;
+  }
+
+  .top-banner-wrapper h1 {
+    width: 100%;
+    padding-left: 1rem;
+    font-size: 2rem !important;
+    justify-content: flex-start;
+  }
+}

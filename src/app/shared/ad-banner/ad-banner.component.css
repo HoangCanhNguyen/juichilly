@@ -46,4 +46,16 @@
     padding-top: 1rem;
     padding-bottom: 0;
   }
+
+  .ad-banner-main .description h1 {
+    font-size: 1.75rem;
+  }
+
+  .mb-40 {
+    margin-bottom: 20px;
+  }
+
+  .top-banner-wrapper {
+    height: 90px;
+  }
 }

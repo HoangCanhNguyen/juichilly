@@ -26,3 +26,22 @@
   padding-left: 2rem;
   color: var(--brown-dark);
 }
+
+@media (max-width: 576px) {
+  .blog .blog-thumbnail {
+    align-self: center;
+  }
+
+  .blog .blog-thumbnail img {
+    width: 100px;
+  }
+
+  .blog .blog-title {
+    padding-left: 1rem;
+  }
+
+  .blog-list h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
