@@ -1,10 +1,29 @@
-<div class="container">
+<app-top-banner
+  [bannerTitle]="'Juice'"
+  [heroImgUrl]="'assets/top-banner-images/orange-hero-img.png'"
+  [heroImgPosition]="'top'"
+></app-top-banner>
+<div class="container mt-100">
   <div class="row text-center">
-    <div class="col-md-4" *ngFor="let product of products">
-      <app-products-rect [product] = "product"></app-products-rect>
+    <div class="col-md-12">
+      <h2 class="cl-orange-light">Sản phẩm</h2>
+      <h1>Hương vị yêu thích của bạn</h1>
     </div>
-    <div class="col-md-6" *ngFor="let product of products2">
-      <app-products-rect [product] = "product"></app-products-rect>
+
+    <div class="col-md-4" *ngFor="let product of products">
+      <app-products-rect [product]="product"></app-products-rect>
+    </div>
+    <div class="col-md-4 offset-md-1" *ngFor="let product of products2">
+      <app-products-rect [product]="product"></app-products-rect>
+    </div>
+  </div>
+  <div class="row mt-100">
+    <div class="col-md-8 w-90 image-banner position-relative p-0">
+      <img src="assets/product-list/salebanner.png" alt="" class="img-fluid" />
+      <div class="position-absolute banner-content text-center">
+        <h1 class="sale-10 text-light">Giảm giá 10%</h1>
+        <h1 class="description cl-orange-light">Mang về nhà ngay hôm nay</h1>
+      </div>
     </div>
   </div>
 </div>

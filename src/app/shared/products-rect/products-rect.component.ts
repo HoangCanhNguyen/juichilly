@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-products-rect',
   templateUrl: './products-rect.component.html',
@@ -12,4 +13,7 @@ export class ProductsRectComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  ngOnChanges() {
+    console.log(this.product)
+  } 
 }
