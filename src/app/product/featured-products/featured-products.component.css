@@ -1,0 +1,41 @@
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.line-break {
+  width: 60%
+}
+
+.product-weight {
+  color: #837d7d;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.market {
+  width: 135px;
+}
+
+.jui-smile {
+  opacity: 0.7;
+}
+
+hr {
+  border: 1px solid #f68c29;
+}
+
+h1 {
+  font-size: 4rem
+}
