@@ -1,3 +1,5 @@
-.bxs-minus-circle, .bxs-plus-circle {
+.bxs-minus-circle,
+.bxs-plus-circle {
   font-size: 30px !important;
+  cursor: pointer;
 }

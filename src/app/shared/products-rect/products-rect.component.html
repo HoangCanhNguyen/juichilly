@@ -9,17 +9,23 @@
   <i *ngFor="let star of [1, 2, 3, 4, 5]" class="bx bxs-star"></i>
   <span class="ml-5">({{ product.rating_amount }} đánh giá)</span>
 </div>
-<div class="btn btn-radius text-light mb-10" [class]="product.button_color">
-  Thêm vào giỏ - 60.000 đ
+<div
+  class="btn btn-radius text-light mb-10"
+  [class]="product.button_color"
+  (click)="onAddingToCart()"
+>
+  Thêm vào giỏ - {{ totalPrice | currency: " ":"code":"3.0" }} đ
 </div>
-<div class="add-cart">
+<div class="add-cart d-flex justify-content-center align-items-center">
   <i
     class="bx bxs-minus-circle bx-flip-vertical"
     [style]="product.add_button"
+    (click)="decreaseByOne()"
   ></i>
-  <span class="px-3">1</span>
+  <span class="px-3">{{ itemAmount }}</span>
   <i
     class="bx bxs-plus-circle bx-flip-vertical"
     [style]="product.add_button"
+    (click)="increaseByOne()"
   ></i>
 </div>
