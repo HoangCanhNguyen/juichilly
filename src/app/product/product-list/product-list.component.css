@@ -1,29 +1,65 @@
-.heroImg {
-  height: 360px !important;
-}
 .mt-100 {
-  margin-top: 100px
+  margin-top: 100px;
 }
 
-.banner-content{
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.banner-content {
   left: 9rem;
-  top: 7rem;
+  top: 6.5rem;
 }
 
-.image-banner:hover img{
+.image-banner:hover img {
   opacity: 0;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
+}
+
+.image-banner:hover .description {
+  opacity: 1;
 }
 
 .image-banner:hover .sale-10 {
   opacity: 0;
 }
 
+.image-banner .description {
+  opacity: 0;
+}
+
 .image-banner {
-  border: 1px solid black;
+  border: 1px solid rgb(19, 18, 18);
   border-radius: 60px;
+}
+
+.line-break {
+  width: 55%;
+}
+
+.product-weight {
+  color: #837d7d;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.old-price {
+  text-decoration: line-through;
+  margin-left: 10px;
 }
 
 h1 {
   font-size: 3rem;
+}
+
+hr {
+  border: 1px solid #f68c29;
 }

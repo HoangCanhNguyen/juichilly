@@ -1,1 +1,77 @@
-<p>featured-products works!</p>
+<app-top-banner
+  [bannerTitle]="'Orange Juice'"
+  [heroImgUrl]="'assets/top-banner-images/orange-hero-img.png'"
+  [heroImgPosition]="'top'"
+></app-top-banner>
+
+<div class="container mt-100 mb-100">
+  <div class="row">
+    <div class="col-md-5 offset-md-1 col-sm-12">
+      <img
+        src="assets/product-list/promote-product.png"
+        alt=""
+        class="img-fluid"
+      />
+    </div>
+    <div class="col-md-5 col-sm-12 mt-40">
+      <h4 class="cl-orange-light">Sản phẩm nổi bật</h4>
+      <h1>Nước cam</h1>
+      <div class="line-break">
+        <hr />
+      </div>
+      <div>60.000 đ</div>
+      <i
+        *ngFor="let star of [1, 2, 3, 4, 5]"
+        class="bx bxs-star"
+        style="color: #f68c29"
+      ></i>
+      <div class="product-weight">Khối lượng: 500ml</div>
+      <p class="mt-40">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate
+        praesentium molestias veniam est enim quibusdam iusto adipisci.
+        Officiis, adipisci consequatur id, delectus beatae doloremque facere
+        perspiciatis excepturi quaerat aliquam inventore.
+      </p>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <button
+            class="btn btn-radius text-light"
+            style="background-color: #f99f33"
+          >
+            <span><i class="bx bxs-cart-alt" style="color: #ffffff"></i></span>
+            Đến cửa hàng
+          </button>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <button
+            class="btn btn-radius text-light market"
+            style="background-color: #f99f33"
+          >
+            <span><i class="bx bxs-basket" style="color: #ffffff"></i></span>
+            Chợ
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center mt-50">
+    <h5 class="cl-orange-light">Bạn cũng có thể thích</h5>
+    <h2 class="mb-10">Các sản phẩm khác của Juichilly</h2>
+    <div class="col-md-3" *ngFor="let product of products">
+      <app-products-rect [product]="product"></app-products-rect>
+    </div>
+    <div class="slogan mt-40">
+      <h2>Luôn đồng hành với những thay đổi tích cực</h2>
+      <div class="jui-smile">#10.000_Juichilly_Smiles</div>
+    </div>
+    <div class="col-md-4 offset-md-4 mt-40">
+      <img src="assets/product-list/devilery.png" alt="" class="img-fluid" width="100%"/>
+    </div>
+    
+  </div>
+</div>
+<section class="ad-banner pt-100 pb-100">
+  <div class="container">
+    <app-ad-banner></app-ad-banner>
+  </div>
+</section>
