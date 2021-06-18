@@ -225,7 +225,7 @@ form input[type="radio"] {
   }
 
   .same-style button {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 
   .payment-method .form-check,
@@ -246,5 +246,22 @@ form input[type="radio"] {
     margin-left: -7px;
     margin-top: 1rem;
     margin-bottom: 2rem;
+  }
+
+  header .navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header .navigation .logo img {
+    width: 70px;
+  }
+
+  header .navigation .cart-icon img {
+    width: 48px;
+  }
+
+  header .navigation button {
+    display: none;
   }
 }

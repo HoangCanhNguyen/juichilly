@@ -11,7 +11,7 @@ SwiperCore.use([Navigation, Autoplay]);
   styleUrls: ['./products-square.component.css']
 })
 export class ProductsSquareComponent implements OnInit {
-  public stars =5;
+  public stars = 5;
   public products = [
     {
       imgUrl: "/assets/images/mix.png",
@@ -58,7 +58,12 @@ export class ProductsSquareComponent implements OnInit {
       button_color: "btn-pink",
       add_button: "color: #D5394B"
     }
-  ]
+  ];
+
+  breakpoints = {
+    0: { slidesPerView: 2, spaceBetween: 20 },
+    768: { slidesPerView: 3, spaceBetween: 30 },
+  };
 
   constructor() { }
 

@@ -101,6 +101,12 @@ p:focus {
   box-shadow: none !important;
 }
 
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
 /* list styles */
 ul {
   padding: 0;
@@ -273,7 +279,7 @@ p {
 /* style section title */
 h1.section-title {
   color: var(--orange-light);
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   font-size: 3rem;
 }
 
@@ -329,5 +335,10 @@ h1.section-title {
 
   h1.section-title {
     font-size: 1.7rem;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
   }
 }

@@ -1,10 +1,10 @@
 <!-- juichilly-intro-banner -->
-<section class="juichilly-intro-banner pb-100">
+<section class="juichilly-intro-banner pt-100 pb-100">
   <div class="container">
     <div class="row">
       <div class="col-lg-4 align-self-center">
         <div class="banner-content">
-          <h1 class="banner-title">Juichilly</h1>
+          <h1 class="banner-title mb-3">Juichilly</h1>
           <p>
             Được làm nguyên chất, thuần khiết, không pha tạp và được tạo ra để
             cải thiện sức khỏe.
@@ -45,7 +45,7 @@
       <div class="col-lg-5 align-self-center">
         <div class="banner-content">
           <h1 class="banner-title">Juichilly</h1>
-          <h3 class="sub-title">Về chúng tôi</h3>
+          <h2 class="sub-title">Về chúng tôi</h2>
           <p>
             Juichilly hình thành từ 2013, là một đội ngũ trẻ đam mê ẩm thực và
             đặc biệt luôn có tình yêu mãnh liệt bởi các thức uống, món ăn ngon –
@@ -54,7 +54,7 @@
             từ nhà nhập khẩu uy tín nhất để phục vụ khách hàng với giá trị THẬT:
             chất lượng, tươi ngon và an toàn.
           </p>
-          <button class="btn primary-btn">
+          <button class="btn primary-btn" [routerLink]="['/about']">
             <img src="../../assets/home/arrow-right-icon.svg" class="me-2" />
             Đọc thêm
           </button>
@@ -81,7 +81,7 @@
   />
 
   <swiper
-    [slidesPerView]="3"
+    [breakpoints]="breakpoints"
     [spaceBetween]="20"
     [navigation]="true"
     [autoplay]="{
@@ -99,10 +99,10 @@
 <section class="featured-products pt-100 pb-100">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-10">
+      <div class="col-lg-10">
         <div class="description text-center">
           <h1 class="section-title">Sản phẩm nổi bật</h1>
-          <h3 class="mb-2 sub-title">Hương vị yêu thích của bạn</h3>
+          <h3 class="sub-title">Hương vị yêu thích của bạn</h3>
           <p class="mb-60">
             Juichilly là hỗn hợp nước trái cây sạch 100% được làm thủ công một
             cách chuyên nghiệp. Chúng tôi sử dụng những thành phần lành mạnh và
@@ -130,7 +130,12 @@
           <p class="mb-3">
             Đánh giá trực tiếp từ các khách hàng của chúng tôi đối với sản phẩm
           </p>
-          <button class="btn secondary-btn btn--orange">Liên hệ</button>
+          <button
+            class="btn secondary-btn btn--orange"
+            [routerLink]="['/contact']"
+          >
+            Liên hệ
+          </button>
         </div>
       </div>
 
@@ -161,9 +166,9 @@
 <section class="community-testi pt-100">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-10">
+      <div class="col-lg-10">
         <div class="description text-center">
-          <h1 class="section-title">Cộng đồng yêu Juichilly</h1>
+          <h1 class="section-title mb-3">Cộng đồng yêu Juichilly</h1>
           <p>
             Bạn có tin cuộc sống của mình sẽ thay đổi từ những thói quen nhỏ bé?
             Bằng chính sự thay đổi của bản thân và những thói quen tích cực chứ
@@ -187,8 +192,8 @@
                 <p class="testi-content">
                   <i class="bx bxs-quote-alt-left"></i> {{ testi.content }}
                 </p>
-                <h5 class="text-end">{{ testi.commentor }}</h5>
-                <p class="text-end">{{ testi.briefDesc }}</p>
+                <h5 class="text-end mb-0">{{ testi.commentor }}</h5>
+                <p class="text-end mb-0">{{ testi.briefDesc }}</p>
               </div>
             </ng-template>
           </swiper>
@@ -258,15 +263,11 @@
           từ gốc rễ. Gọi ngay cho True Juice để được tư vấn chế độ phù hợp cải
           thiện sức khỏe ngay bây giờ nhé!
         </p>
-        <button class="btn order-now-btn">Đặt hàng ngay</button>
+        <button class="btn order-now-btn" [routerLink]="['/product']">
+          Đặt hàng ngay
+        </button>
         <span>Hotline 097 111 2222</span>
       </div>
     </div>
   </div>
 </section>
-
-<!-- <app-top-banner
-  [bannerTitle]="'Bộ sưu tập'"
-  [heroImgUrl]="'../../assets/top-banner-images/orange-hero-img.png'"
-  [heroImgPosition]="'top'"
-></app-top-banner> -->

@@ -52,8 +52,12 @@ export class HomeComponent implements OnInit {
       professional: 'Graphic Designer',
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
-
   ]
+
+  breakpoints = {
+    0: { slidesPerView: 1, spaceBetween: 20 },
+    768: { slidesPerView: 3, spaceBetween: 30 },
+  };
 
   constructor() { }
 

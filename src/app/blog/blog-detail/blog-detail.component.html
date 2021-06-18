@@ -1539,5 +1539,125 @@
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-9">
+        <div class="comments-wrapper pt-100">
+          <div
+            class="reviews-area"
+            [ngStyle]="{
+              display: 'block'
+            }"
+            style="flex-direction: column"
+          >
+            <div class="your-cmt">
+              <form>
+                <div class="row">
+                  <div class="col-12">
+                    <h3 class="mb-3">Viết bình luận của bạn</h3>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <input
+                      type="text"
+                      placeholder="Họ và tên"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <input
+                      type="text"
+                      placeholder="Email / Số điện thoại"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <textarea
+                      class="form-control"
+                      rows="4"
+                      placeholder="Bạn nghĩ sao về bài viết này..."
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <button class="btn primary-btn mt-3 float-end">
+                      Bình luận
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="buyer-cmts">
+              <div class="cmt">
+                <div class="avatar">
+                  <img
+                    src="../../../assets/blog/user1.png"
+                    alt="comment.user.username"
+                  />
+                </div>
+                <div class="w-100">
+                  <div class="content-wrapper">
+                    <span>Taylor Swift</span>
+                    <span>8:20 - 18/06/2022</span>
+                    <p>I love orange juice, it makes me beautiful</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cmt">
+                <div class="avatar">
+                  <img
+                    src="../../../assets/blog/user3.png"
+                    alt="comment.user.username"
+                  />
+                </div>
+                <div class="w-100">
+                  <div class="content-wrapper">
+                    <span>Ava Max</span>
+                    <span>8:32 - 18/06/2022</span>
+                    <p>
+                      Having orange juice daily makes my skin as soft as baby's
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cmt">
+                <div class="avatar">
+                  <img
+                    src="../../../assets/blog/user5.png"
+                    alt="comment.user.username"
+                  />
+                </div>
+                <div class="w-100">
+                  <div class="content-wrapper">
+                    <span>Bella poarch</span>
+                    <span>8:35 - 18/06/2022</span>
+                    <p>
+                      Juice has improved me health immensely for the past 2
+                      years
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="home-redirect pt-100 text-center">
+          <h3 class="mb-4">
+            Nước ép lạnh nguyên chất hoa quả <br />
+            cải thiện sức khỏe - thanh lọc cơ thể
+          </h3>
+          <button class="btn primary-btn w-100" [routerLink]="['/home']">
+            Mời bạn ghé thăm Juichilly nhé !
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
