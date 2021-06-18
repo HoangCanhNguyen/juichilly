@@ -64,3 +64,9 @@ h1.section__title::after {
   color: #f99f33;
   padding: 0px 1.8rem 1.8rem !important;
 }
+
+@media (max-width: 576px) {
+  .faq-wrapper {
+    height: 400px;
+  }
+}

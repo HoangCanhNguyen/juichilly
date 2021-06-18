@@ -1,7 +1,7 @@
 <header>
   <div class="container">
     <div class="navigation">
-      <button class="btn">
+      <button class="btn" [routerLink]="['/product']">
         <i class="bx bx-chevron-left mr-2"></i>Tiếp tục mua sắm
       </button>
 
@@ -21,7 +21,7 @@
     <ng-template #emptyCart>
       <div class="empty-cart same-style pt-100 pb-100">
         <h1>Giỏ hàng hiện đang trống</h1>
-        <button class="btn">
+        <button class="btn" [routerLink]="['/product']">
           <i class="bx bx-chevron-left mr-2"></i>Tiếp tục mua sắm
         </button>
       </div>
@@ -30,7 +30,7 @@
     <ng-template #orderSuccess>
       <div class="order-success same-style pt-100 pb-100">
         <h1>Đặt hàng thành công !</h1>
-        <button class="btn">
+        <button class="btn" [routerLink]="['/product']">
           <i class="bx bx-chevron-left mr-2"></i>Tiếp tục mua sắm
         </button>
       </div>
@@ -45,7 +45,10 @@
 
               <div class="items">All items in your cart is here</div>
 
-              <button class="btn p-0 d-flex align-items-center">
+              <button
+                class="btn p-0 d-flex align-items-center"
+                [routerLink]="['/product']"
+              >
                 <i class="bx bx-chevron-left mr-2"></i>Tiếp tục mua sắm
               </button>
             </div>
