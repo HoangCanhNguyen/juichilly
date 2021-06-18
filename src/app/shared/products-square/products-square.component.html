@@ -1,6 +1,7 @@
 <div class="container text-center">
   <swiper
-    [breakpoints]="breakpoints"
+    [slidesPerView]="3"
+    [spaceBetween]="20"
     [navigation]="true"
     [autoplay]="{
       delay: 3000,
@@ -27,7 +28,6 @@
             class="bx bxs-star"
             [class]="product.font_color"
           ></i>
-
           <span class="ml-5" [class]="product.font_color"
             >({{ product.rating_amount }} đánh giá)</span
           >

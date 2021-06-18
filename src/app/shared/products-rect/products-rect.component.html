@@ -1,21 +1,25 @@
-<img [src]="product.imageUrl" alt="" class="img-fluid mb-20" />
-<h5 class="product-title m-0" id="title_{{product.id}}">{{ product.title }}</h5>
-<div class="short-description" id="description_{{product.id}}">
+<img [src]="product.imgUrl" alt="" class="img-fluid mb-20" width="60%" />
+<h5 class="product-title m-0" [class]="product.font_color">
+  {{ product.title }}
+</h5>
+<div class="short-description" [class]="product.font_color">
   {{ product.short_description }}
 </div>
-<div class="star mb-10"id="rating_{{product.id}}">
-    <i class="bx bxs-star"></i>
-    <i class="bx bxs-star"></i>
-    <i class="bx bxs-star"></i>
-    <i class="bx bxs-star"></i>
-    <i class="bx bxs-star"></i>
-  <span class="ml-5" >({{ product.rating_amount }} đánh giá)</span>
+<div class="star mb-10" [class]="product.font_color">
+  <i *ngFor="let star of [1, 2, 3, 4, 5]" class="bx bxs-star"></i>
+  <span class="ml-5">({{ product.rating_amount }} đánh giá)</span>
 </div>
-<div class="btn btn-radius text-light mb-10" id="btn_{{product.id}}">
+<div class="btn btn-radius text-light mb-10" [class]="product.button_color">
   Thêm vào giỏ - 60.000 đ
 </div>
 <div class="add-cart">
-  <i class="bx bxs-minus-circle bx-flip-vertical" id="plus_{{product.id}}"></i>
+  <i
+    class="bx bxs-minus-circle bx-flip-vertical"
+    [style]="product.add_button"
+  ></i>
   <span class="px-3">1</span>
-  <i class="bx bxs-plus-circle bx-flip-vertical" id="minus_{{product.id}}"></i>
+  <i
+    class="bx bxs-plus-circle bx-flip-vertical"
+    [style]="product.add_button"
+  ></i>
 </div>

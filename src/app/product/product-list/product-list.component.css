@@ -1,0 +1,29 @@
+.heroImg {
+  height: 360px !important;
+}
+.mt-100 {
+  margin-top: 100px
+}
+
+.banner-content{
+  left: 9rem;
+  top: 7rem;
+}
+
+.image-banner:hover img{
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.image-banner:hover .sale-10 {
+  opacity: 0;
+}
+
+.image-banner {
+  border: 1px solid black;
+  border-radius: 60px;
+}
+
+h1 {
+  font-size: 3rem;
+}
