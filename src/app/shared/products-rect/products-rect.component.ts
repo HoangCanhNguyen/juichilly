@@ -1,9 +1,9 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Product } from '../models/product';
 import { CartService } from '../services/cart.service';
-import { filter } from "rxjs/operators/";
+import { filter, map } from "rxjs/operators/";
 import { Subscription } from 'rxjs';
+import { Product } from '../models/product';
 
 @Component({
   selector: 'app-products-rect',
@@ -11,23 +11,26 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./products-rect.component.css'],
 })
 export class ProductsRectComponent implements OnInit, OnDestroy {
-  @Input() product: any = [];
+  @Input() product: any;
+  @Input() additionalClass: string;
+
   itemAmount = 1;
   totalPrice = 60000;
 
   cartSub: Subscription;
+  cart = [];
 
   constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit(): void {
-    this.cartSub = this.cartService.cart$.subscribe(cart => {
-      if (cart) {
-        console.log(cart);
+    this.cartSub = this.cartService.cart$.pipe(filter(cart => !!cart)).subscribe(cart => {
+      this.cart = cart;
+      const itemInCart = this.cart.find(item => item.product.title === this.product.title);
+      if (itemInCart) {
+        this.itemAmount = itemInCart.amount;
+        this.totalPrice = itemInCart.totalPrice;
       }
     })
-  }
-
-  ngOnChanges() {
   }
 
   ngOnDestroy() {
@@ -35,17 +38,34 @@ export class ProductsRectComponent implements OnInit, OnDestroy {
   }
 
   onAddingToCart(): void {
-    this.cartService.addToCart(this.product, this.itemAmount, this.totalPrice);
-    this.router.navigate(['/cart'])
+    this.updateCart();
+    this.router.navigate(['/cart']);
+  }
+
+  onRemovingFromCart(): void {
+    this.cartService.removeItem(this.product)
   }
 
   increaseByOne() {
     this.itemAmount++;
     this.totalPrice = this.itemAmount * this.product.price;
+
+    this.updateCart();
   }
 
   decreaseByOne() {
     this.itemAmount--;
     this.totalPrice = this.itemAmount * this.product.price;
+
+    this.updateCart()
+  }
+
+  updateCart(): void {
+    const newItem = {
+      amount: this.itemAmount,
+      totalPrice: this.totalPrice,
+      product: this.product
+    }
+    this.cartService.addToCart(newItem);
   }
 }

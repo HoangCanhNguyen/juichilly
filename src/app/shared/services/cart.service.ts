@@ -1,21 +1,36 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Product } from '../models/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  private cartSubject = new BehaviorSubject<Product[]>(null);
+  private cartSubject = new BehaviorSubject<any>([]);
   cart$ = this.cartSubject.asObservable();
   cart = [];
 
   constructor() { }
 
-  addToCart(item: Product, amount: number, totalPrice: number) {
-    let itemID = Math.random().toString().substr(0, 5);
-    const newItem = { id: itemID, item: { ...item }, amount: amount, totalPrice: totalPrice };
-    this.cart.push(newItem);
+  addToCart(newItem: any) {
+    const duplicateItemId = this.cart.findIndex(item => item.product.title === newItem.product.title);
+    if (duplicateItemId > -1) {
+      this.cart[duplicateItemId] = newItem;
+    }
+    else {
+      this.cart.push(newItem);
+    }
+
     this.cartSubject.next(this.cart);
+  }
+
+  removeItem(item: any) {
+    const removedItemId = this.cart.findIndex(cartItem => cartItem.product.title === item.title);
+    this.cart.splice(removedItemId, 1);
+    this.cartSubject.next(this.cart);
+  }
+
+  clearCart() {
+    this.cart = [];
+    this.cartSubject.next([]);
   }
 }
