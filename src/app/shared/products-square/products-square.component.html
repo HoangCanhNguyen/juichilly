@@ -1,6 +1,7 @@
 <div class="container text-center">
   <swiper
-    [breakpoints]="breakpoints"
+    [slidesPerView]="3"
+    [spaceBetween]="20"
     [navigation]="true"
     [autoplay]="{
       delay: 3000,
@@ -26,6 +27,26 @@
             *ngFor="let star of [1, 2, 3, 4, 5]"
             class="bx bxs-star"
             [class]="product.font_color"
+          ></i>
+          <span class="ml-5" [class]="product.font_color"
+            >({{ product.rating_amount }} đánh giá)</span
+          >
+        </div>
+        <div
+          class="btn btn-radius text-light mb-10"
+          [class]="product.button_color"
+        >
+          Thêm vào giỏ - 60.000 đ
+        </div>
+        <div class="add-cart">
+          <i
+            class="bx bxs-minus-circle bx-flip-vertical"
+            [style]="product.add_button"
+          ></i>
+          <span class="px-3">1</span>
+          <i
+            class="bx bxs-plus-circle bx-flip-vertical"
+            [style]="product.add_button"
           ></i>
 
           <span class="ml-5" [class]="product.font_color"

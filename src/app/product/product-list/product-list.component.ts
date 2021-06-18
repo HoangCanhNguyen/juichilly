@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/shared/products-rect/products-rect.component';
 
 @Component({
   selector: 'app-product-list',
@@ -7,9 +6,8 @@ import { Product } from 'src/app/shared/products-rect/products-rect.component';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
-  public products: Product[] = [
+  public products: any = [
     {
-      id: 1,
       title: 'Cam Lựu',
       short_description: '+ Năng lượng',
       rating_amount: 25,
@@ -17,7 +15,6 @@ export class ProductListComponent implements OnInit {
       color: 'pink-dark',
     },
     {
-      id: 2,
       title: 'Cam',
       short_description: '+ Bổ sung Vitamin',
       rating_amount: 23,
@@ -25,7 +22,6 @@ export class ProductListComponent implements OnInit {
       color: 'orange-light',
     },
     {
-      id: 3,
       title: 'Cam Chanh',
       short_description: '+ Tăng cường sức đề kháng',
       rating_amount: 81,
@@ -35,7 +31,7 @@ export class ProductListComponent implements OnInit {
     },
   ];
 
-  public products2: Product[] = [
+  public products2: any = [
     {
       id: 4,
       title: 'Cam Đỏ',
