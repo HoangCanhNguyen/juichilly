@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/shared/models/product';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -16,6 +18,7 @@ export class ProductListComponent implements OnInit {
       font_color: 'cl-green-dark',
       button_color: 'btn-green-dark',
       add_button: 'color: #4c7838',
+      price: 60000
     },
     {
       imgUrl:
@@ -26,6 +29,7 @@ export class ProductListComponent implements OnInit {
       font_color: 'cl-green',
       button_color: 'btn-green',
       add_button: 'color: #79b152',
+      price: 60000
     },
     {
       imgUrl:
@@ -36,6 +40,7 @@ export class ProductListComponent implements OnInit {
       font_color: 'cl-orange-light',
       button_color: 'btn-orange',
       add_button: 'color: #f68c29',
+      price: 60000
     },
   ];
 
@@ -49,6 +54,7 @@ export class ProductListComponent implements OnInit {
       font_color: 'cl-pink-dark',
       button_color: 'btn-pink-dark',
       add_button: 'color: #7f0d4c',
+      price: 60000
     },
     {
       imgUrl:
@@ -59,10 +65,11 @@ export class ProductListComponent implements OnInit {
       font_color: 'cl-pink',
       button_color: 'btn-pink',
       add_button: 'color: #D5394B',
+      price: 60000
     },
   ];
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
