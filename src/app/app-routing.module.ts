@@ -37,7 +37,7 @@ const routes: Routes = [
       { path: 'member', component: MemberComponent },
       { path: 'member/:name', component: MemberDetailComponent },
       { path: 'become-partner', component: PartnerComponent },
-      { path: 'evironment', component: StopPlasticComponent },
+      { path: 'stop-plastic', component: StopPlasticComponent },
       { path: 'promotion', component: PromotionComponent },
       { path: 'collection', component: CollectionComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
