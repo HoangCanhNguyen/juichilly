@@ -1,0 +1,61 @@
+.mt-5rem {
+  margin-top: 5rem;
+}
+
+.banner {
+  background-color: #ffb180 !important;
+}
+
+h1 {
+  color: #e2702b;
+}
+
+h2 {
+  color: #d23131;
+}
+
+.paragraph {
+  color: #ffffbf;
+}
+
+.about {
+  background-color: #eda49e;
+}
+
+p {
+  font-size: 15px;
+}
+
+.sub-header {
+  color: #c75112;
+}
+
+.best-things {
+  color: #2d892d;
+}
+
+.example-content {
+  background-color: #ECF5E5;
+  height: 20rem;
+  margin-top: 180px
+}
+
+.image-1 {
+  left: 14rem;
+  top: 0;
+}
+
+.image-2 {
+  left: 30rem;
+  top: 5rem;
+}
+
+.image-3 {
+  left: 50rem;
+  top: 0rem;
+}
+
+.desc {
+  bottom: 1rem;
+  left: 19rem;
+}
