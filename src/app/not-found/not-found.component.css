@@ -1,0 +1,24 @@
+h1 {
+  font-size:5.5rem
+}
+
+p {
+  font-size:2.5rem;
+  color: #3B3B3B
+}
+
+
+.mt-md-50 {
+  margin-top: 7rem;
+}
+
+.btn-orange {
+  background-color: #F99F33;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 576px) {
+  .mt-md-50 {
+    margin-top:5rem
+  }
+}
