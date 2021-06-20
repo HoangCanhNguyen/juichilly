@@ -17,6 +17,7 @@ export class FeaturedProductsComponent implements OnInit {
       font_color: 'cl-green-dark',
       button_color: 'btn-green-dark',
       add_button: 'color: #4c7838',
+      price: 60000
     },
     {
       imgUrl:
@@ -27,6 +28,7 @@ export class FeaturedProductsComponent implements OnInit {
       font_color: 'cl-green',
       button_color: 'btn-green',
       add_button: 'color: #79b152',
+      price: 60000
     },
     {
       imgUrl:
@@ -37,6 +39,7 @@ export class FeaturedProductsComponent implements OnInit {
       font_color: 'cl-orange-light',
       button_color: 'btn-orange',
       add_button: 'color: #f68c29',
+      price: 60000
     },
     {
       imgUrl:
@@ -47,11 +50,12 @@ export class FeaturedProductsComponent implements OnInit {
       font_color: 'cl-pink-dark',
       button_color: 'btn-pink-dark',
       add_button: 'color: #7f0d4c',
+      price: 60000
     }
-    
+
   ];
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
   }
