@@ -1,9 +1,8 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
-import { filter, map } from "rxjs/operators/";
+import { filter } from "rxjs/operators/";
 import { Subscription } from 'rxjs';
-import { Product } from '../models/product';
 
 @Component({
   selector: 'app-products-rect',
