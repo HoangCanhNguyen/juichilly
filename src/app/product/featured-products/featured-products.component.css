@@ -32,10 +32,42 @@
   opacity: 0.7;
 }
 
+.store {
+  background-color: #f99f33
+}
+
 hr {
   border: 1px solid #f68c29;
+  margin: 0.5rem 0;
 }
 
 h1 {
   font-size: 4rem
+}
+
+@media (max-width: 576px) {
+  .market {
+    display:none
+  }
+
+  .product-description {
+    text-align: center;
+  }
+
+  .mt-40 {
+    margin-top: 20px;
+  }
+
+  .line-break {
+    width: 70%
+  }
+
+  hr {
+    margin-left: 7rem;
+
+  }
+
+  h1 {
+    font-size: 2rem
+  }
 }

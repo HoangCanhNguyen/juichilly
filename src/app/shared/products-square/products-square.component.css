@@ -28,3 +28,17 @@
 .bxs-plus-circle {
   font-size: 30px !important;
 }
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}

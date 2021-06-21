@@ -1,4 +1,4 @@
-<div class="product-rectangle" [class]="additionalClass">
+<div class="product-rectangle desktop" [class]="additionalClass">
   <img [src]="product.imgUrl" alt="" class="img-fluid mb-20" width="60%" />
   <div class="product-info">
     <h5 class="product-title m-0" [class]="product.font_color">
@@ -33,6 +33,5 @@
       ></i>
     </div>
   </div>
-
   <i class="bx bx-trash d-none" (click)="onRemovingFromCart()"></i>
 </div>

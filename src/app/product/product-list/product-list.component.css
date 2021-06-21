@@ -63,3 +63,28 @@ h1 {
 hr {
   border: 1px solid #f68c29;
 }
+
+.btn {
+  margin-left: 7rem;
+}
+
+@media (max-width: 576px) {
+  .sale-10 {
+    font-size:40px;
+
+  }
+
+  .description {
+    display: none;
+  }
+  .image-banner:hover .sale-10 {
+    opacity: 1;
+  }
+  .image-banner:hover img {
+    opacity: 1;
+  }
+  .banner-content {
+    left: 4rem;
+    top: 3.5rem;
+  }
+}

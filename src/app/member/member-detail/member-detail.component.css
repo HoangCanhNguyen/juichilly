@@ -1,28 +1,27 @@
 .btn-orange {
-  background-color:#F99F33
+  background-color: #f99f33;
 }
 
 .cl-orange {
-  color: #F99F33
+  color: #f99f33;
 }
 
 .bx {
   font-size: 20px;
-  margin-right: 10px !important
+  margin-right: 10px !important;
 }
 
-.right-item {
-  position: relative;
+/* .right-item {
   right: 0;
   top: 0;
-}
+} */
 
 .banner-info {
   margin-top: 5rem;
 }
 
-.banner>* {
-  padding-right: 0 !important
+.banner > * {
+  padding-right: 0 !important;
 }
 
 .jumbotron-fluid {
@@ -30,5 +29,27 @@
 }
 
 .intro {
-  margin-top:5rem
+  margin-top: 5rem;
+}
+
+@media (max-width: 576px) {
+  .right-item {
+    position: relative;
+    right: 2.5rem;
+    top: 0;
+  }
+
+  .right-item > img {
+    max-width:140% !important
+  }
+
+  .banner-info {
+    margin-top: 1rem;
+  }
+  .intro {
+    margin-top: 3rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
 }
