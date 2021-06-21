@@ -11,6 +11,7 @@ h1 {
 }
 
 h2 {
+  font-size: 3rem;
   color: #d23131;
 }
 
@@ -22,8 +23,8 @@ h2 {
   background-color: #eda49e;
 }
 
-p {
-  font-size: 15px;
+.banner p {
+  font-size: 1.5rem;
 }
 
 .sub-header {
@@ -35,9 +36,9 @@ p {
 }
 
 .example-content {
-  background-color: #ECF5E5;
+  background-color: #ecf5e5;
   height: 20rem;
-  margin-top: 180px
+  margin-top: 180px;
 }
 
 .image-1 {
@@ -58,4 +59,26 @@ p {
 .desc {
   bottom: 1rem;
   left: 19rem;
+}
+
+@media (max-width: 576px) {
+  .about.p-5 {
+    padding: 1rem !important;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner p {
+    font-size: 1.125rem;
+  }
+
+  .mt-5rem {
+    margin-top: 1rem !important;
+  }
 }
