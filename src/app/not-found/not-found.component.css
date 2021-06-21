@@ -21,4 +21,16 @@ p {
   .mt-md-50 {
     margin-top:5rem
   }
+  
+  .image-404 {
+    order: 1;
+  }
+
+  .content-404 {
+    order: 2;
+  }
+
+  .btn {
+    margin-bottom: 2rem;
+  }
 }

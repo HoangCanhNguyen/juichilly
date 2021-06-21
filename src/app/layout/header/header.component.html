@@ -8,97 +8,110 @@
         width="90"
       />
     </a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <div class="nav-link active" [routerLink]="'/home'">Trang chủ</div>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="dropdownMenuLink"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Sản phẩm
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <li>
-            <a class="dropdown-item cl-pink" [routerLink]="'/product'"
-              >Sản phẩm</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item cl-pink" [routerLink]="'/best-product'"
-              >Sản phẩm nổi bật</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          id="dropdownMenuLink"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Về chúng tôi
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <li>
-            <a class="dropdown-item cl-pink" [routerLink]="'/about'"
-              >Về chúng tôi</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item cl-pink" [routerLink]="'/member'"
-              >Đội ngũ</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item cl-pink" [routerLink]="'/member/daniel'"
-              >Đội ngũ chi tiết</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item cl-pink" [routerLink]="'/collection'"
-              >Bộ sưu tập</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item cl-pink" [routerLink]="'/privacy'"
-              >Điều khoản & dịch vụ!</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item cl-pink" [routerLink]="'/stop-plastic'"
-              >Stop plastic</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item cl-pink" [routerLink]="'/404'"
-              >Error page 404</a
-            >
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <div class="nav-link" [routerLink]="'/blog'">Blog</div>
-      </li>
-      <li class="nav-item">
-        <div class="nav-link" [routerLink]="'/promotion'">Khuyến mãi</div>
-      </li>
-      <li class="nav-item">
-        <div class="nav-link" [routerLink]="'/faq'">FAQS</div>
-      </li>
-      <li class="nav-item">
-        <button
-          class="btn btn-radius btn-contact text-light mt-1"
-          type="button"
-          [routerLink]="'/contact'"
-        >
-          Liên hệ
-        </button>
-      </li>
-    </ul>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navberHeader"
+      aria-controls="navberHeader"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navberHeader">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <div class="nav-link active" [routerLink]="'/home'">Trang chủ</div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="dropdownMenuLink"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sản phẩm
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li>
+              <a class="dropdown-item cl-pink" [routerLink]="'/product'"
+                >Sản phẩm</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item cl-pink" [routerLink]="'/best-product'"
+                >Sản phẩm nổi bật</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="dropdownMenuLink"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Về chúng tôi
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li>
+              <a class="dropdown-item cl-pink" [routerLink]="'/about'"
+                >Về chúng tôi</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item cl-pink" [routerLink]="'/member'"
+                >Đội ngũ</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item cl-pink" [routerLink]="'/member/daniel'"
+                >Đội ngũ chi tiết</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item cl-pink" [routerLink]="'/collection'"
+                >Bộ sưu tập</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item cl-pink" [routerLink]="'/privacy'"
+                >Điều khoản & dịch vụ!</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item cl-pink" [routerLink]="'/stop-plastic'"
+                >Stop plastic</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item cl-pink" [routerLink]="'/404'"
+                >Error page 404</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link" [routerLink]="'/blog'">Blog</div>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link" [routerLink]="'/promotion'">Khuyến mãi</div>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link" [routerLink]="'/faq'">FAQS</div>
+        </li>
+        <li class="nav-item">
+          <button
+            class="btn btn-radius btn-contact text-light mt-1"
+            type="button"
+            [routerLink]="'/contact'"
+          >
+            Liên hệ
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
