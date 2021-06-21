@@ -1,0 +1,32 @@
+hr {
+  border: 1px solid #f68c29;
+}
+
+.m-8rem {
+  margin: 8rem 0;
+}
+
+.side-card {
+  background-color: rgba(228, 228, 228, 0.4);
+  border-radius: 15px;
+  height: 25rem;
+}
+
+.card {
+  margin-left: 2rem;
+  width: 18rem;
+  box-shadow: 0 3px 6px #a0a0a0;
+}
+
+.card-title {
+  color: #707070
+}
+
+.card-sub-title {
+  color: #F99F33
+}
+
+.bx {
+  font-size: 20px;
+  margin-right: 2rem;
+}
