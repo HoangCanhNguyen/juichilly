@@ -1,7 +1,9 @@
 <div class="jumbotron jumbotron-fluid py-5">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-3 offset-md-1 col-sm-3 col-12 text-center logo-section">
+      <div
+        class="col-md-3 offset-md-1 col-sm-3 col-12 text-center logo-section"
+      >
         <img src="assets/footer/logo.png" alt="" class="img-fluid mb-4" />
         <div class="description mb-4 cl-gray">
           Nước trái cây tự nhiên cải thiện sức khỏe với nước ép nguyên chất.
@@ -31,7 +33,18 @@
           />
         </div>
       </div>
-      <div class="col-md-2 offset-md-1 col-sm-12 offset-sm-1 ml-sm-3rem col-12 mt-3rem pl-5">
+      <div
+        class="
+          col-md-2
+          offset-md-1
+          col-sm-12
+          offset-sm-1
+          ml-sm-3rem
+          col-12
+          mt-3rem
+          pl-5
+        "
+      >
         <h3>Các sản phẩm</h3>
         <ul class="list-group border-0 cl-gray">
           <li class="list-group-item border-0 cl-gray">Nước cam</li>
@@ -46,21 +59,39 @@
       <div class="col-md-2 col-sm-12 col-12 mt-3rem ml-sm-3rem pl-5">
         <h3>Về Juichilly</h3>
         <ul class="list-group border-0 cl-gray">
-          <li class="list-group-item border-0 cl-gray">
+          <li
+            class="list-group-item border-0 cl-gray"
+            [routerLink]="['/about']"
+          >
             Câu chuyện của chúng ta
           </li>
-          <li class="list-group-item border-0 cl-gray">Khuyến mãi</li>
-          <li class="list-group-item border-0 cl-gray">Đội ngũ</li>
-          <li class="list-group-item border-0 cl-gray">Bài viết</li>
+          <li
+            class="list-group-item border-0 cl-gray"
+            [routerLink]="['/promotion']"
+          >
+            Khuyến mãi
+          </li>
+          <li
+            class="list-group-item border-0 cl-gray"
+            [routerLink]="['/member']"
+          >
+            Đội ngũ
+          </li>
+          <li class="list-group-item border-0 cl-gray" [routerLink]="['/blog']">
+            Bài viết
+          </li>
         </ul>
       </div>
       <div class="col-md-2 col-sm-11 col-12 mt-3rem ml-sm-3rem pl-5">
         <h3>Trợ giúp</h3>
         <ul class="list-group border-0 cl-gray">
-          <li class="list-group-item border-0 cl-gray">
+          <li class="list-group-item border-0 cl-gray" [routerLink]="['/faq']">
             Những câu hỏi thường gặp
           </li>
-          <li class="list-group-item border-0 cl-gray">
+          <li
+            class="list-group-item border-0 cl-gray"
+            [routerLink]="['/privacy']"
+          >
             Điều khoản và dịch vụ
           </li>
         </ul>

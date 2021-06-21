@@ -1,29 +1,32 @@
 h1 {
-  font-size:5.5rem
+  font-size: 5.5rem;
 }
 
 p {
-  font-size:2.5rem;
-  color: #3B3B3B
+  font-size: 2.5rem;
+  color: #3b3b3b;
 }
-
 
 .mt-md-50 {
   margin-top: 7rem;
 }
 
 .btn-orange {
-  background-color: #F99F33;
+  background-color: #f99f33;
   font-size: 1.2rem;
 }
 
 @media (max-width: 576px) {
   .mt-md-50 {
-    margin-top:5rem
+    margin-top: 1rem;
   }
-  
+
   .image-404 {
     order: 1;
+  }
+
+  p {
+    font-size: 1.5rem;
   }
 
   .content-404 {

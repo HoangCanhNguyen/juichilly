@@ -96,6 +96,7 @@ h1.banner-title {
 .order-now {
   background: url("../../assets/home/order-now-bg-img.jpg") center no-repeat;
   height: 850px;
+  background-size: cover;
 }
 
 .order-now h1 {
@@ -147,7 +148,7 @@ img.decor.decor--topleft {
 }
 
 img.decor.decor--bottomright {
-  bottom: 0;
+  bottom: 0.5rem;
   right: 0;
   transform: translateY(100%);
 }
