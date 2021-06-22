@@ -1,7 +1,9 @@
-h1.section-title {
-  width: min(700px, 100%);
+h1.page-title {
+  width: min(800px, 100%);
   margin-inline: auto;
   margin-bottom: 4rem;
+  font-size: 2.5rem;
+  color: var(--orange-light);
 }
 
 .promo {
@@ -26,7 +28,7 @@ h1.section-title {
   align-self: center;
 }
 
-.promo .promo-title h3 {
+.promo .promo-title h4 {
   cursor: pointer;
   color: #2d8326;
   margin-bottom: 1rem;
@@ -40,7 +42,7 @@ h1.section-title {
 .top-banner-wrapper {
   background-color: var(--orange-light);
   position: relative;
-  height: 530px;
+  height: 420px;
 }
 
 .top-banner-wrapper h1 {
@@ -49,7 +51,7 @@ h1.section-title {
   padding-left: 6rem;
   width: 50%;
   text-align: center;
-  font-size: 7rem !important;
+  font-size: 5rem !important;
   height: 100%;
   display: flex;
   align-items: center;
@@ -58,7 +60,7 @@ h1.section-title {
 }
 
 .top-banner-wrapper img {
-  max-width: 100%;
+  max-width: 50%;
   position: absolute;
 }
 
@@ -85,7 +87,8 @@ h1.section-title {
     padding-left: 1rem;
   }
 
-  h1.section-title {
+  h1.page-title {
+    font-size: 1.75rem;
     margin-bottom: 2rem;
   }
 

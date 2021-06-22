@@ -119,7 +119,6 @@ form textarea {
 .home-redirect button {
   border-radius: 0px;
   font-size: 1.5rem;
-  font-family: "Lora", serif;
 }
 
 @media (max-width: 576px) {

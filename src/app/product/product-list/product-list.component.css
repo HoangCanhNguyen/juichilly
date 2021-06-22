@@ -14,6 +14,10 @@
   margin-top: 20px;
 }
 
+h2 {
+  font-size: 1.25rem;
+}
+
 .banner-content {
   left: 9rem;
   top: 6.5rem;
@@ -57,7 +61,7 @@
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 hr {
@@ -70,8 +74,7 @@ hr {
 
 @media (max-width: 576px) {
   .sale-10 {
-    font-size:40px;
-
+    font-size: 40px;
   }
 
   .description {
@@ -86,5 +89,13 @@ hr {
   .banner-content {
     left: 4rem;
     top: 3.5rem;
+  }
+
+  .mt-100 {
+    margin-top: 4rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
   }
 }

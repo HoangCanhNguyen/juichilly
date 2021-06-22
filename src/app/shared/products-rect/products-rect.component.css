@@ -53,7 +53,7 @@
 
 @media (max-width: 576px) {
   .cart-item img {
-    width: 35%;
+    width: 100px;
     margin-bottom: 0;
   }
 
