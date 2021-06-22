@@ -1,8 +1,73 @@
 .quick-contact {
   position: fixed;
   right: 1rem;
-  bottom: 1rem;
+  bottom: 2rem;
   display: flex;
   z-index: 90;
   flex-direction: column;
+}
+
+.chatbox {
+  position: fixed;
+  width: min(350px, 100%);
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  right: 1rem;
+  bottom: 6rem;
+  z-index: 91;
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transform: scaleX(0) scaleY(0);
+  transform-origin: bottom right;
+  transition: all 0.4s;
+}
+
+.chatbox .bx-x {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  cursor: pointer;
+}
+
+.chatbox.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: scaleX(1) scaleY(1);
+}
+
+form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  margin-bottom: 1.5rem;
+  border: 1px solid #707070;
+}
+
+.chatbox p {
+  font-weight: 500;
+  color: var(--orange-light);
+}
+
+/* form textarea {
+  margin-bottom: 1rem;
+
+} */
+
+@media (max-width: 576px) {
+  .quick-contact {
+    align-items: flex-end;
+  }
+
+  .quick-contact img {
+    width: 80%;
+  }
+
+  .chatbox {
+    bottom: 5rem;
+  }
 }

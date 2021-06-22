@@ -5,10 +5,29 @@
 <div class="quick-contact">
   <img
     src="../../assets/home/cart-icon.png"
-    class="mb-4"
+    class="mb-lg-4 mb-3"
     style="cursor: pointer"
     [routerLink]="['/cart']"
   />
-  <img src="../../assets/home/contact-icon.png" class="mb-2" />
-  <img src="../../assets/home/message-icon.png" />
+  <img src="../../assets/home/contact-icon.png" class="mb-3" />
+  <img
+    src="../../assets/home/message-icon.png"
+    style="cursor: pointer"
+    (click)="showChatbox = !showChatbox"
+  />
+</div>
+
+<div class="chatbox" [ngClass]="{ show: showChatbox }">
+  <i class="bx bx-x" (click)="showChatbox = false"></i>
+  <div class="text-center">
+    <p class="mb-0">Vui lòng để lại thông tin!</p>
+    <p>Juichilly sẽ liên hệ lại sau ít phút</p>
+  </div>
+  <form>
+    <input type="text" placeholder="Tên *" class="form-control" />
+    <input type="text" placeholder="Số điện thoại *" class="form-control" />
+    <input type="email" placeholder="Email *" class="form-control" />
+    <textarea rows="5" class="form-control" placeholder="Tin nhắn"></textarea>
+    <button class="btn primary-btn w-100">Gửi tin nhắn</button>
+  </form>
 </div>

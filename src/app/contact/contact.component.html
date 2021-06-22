@@ -7,7 +7,7 @@
 
   <div class="container mt-13 mb-5">
     <div class="row">
-      <div class="col-md-4 offset-md-1 col-sm-12 message">
+      <div class="col-md-5 col-sm-12 message">
         <div class="contact-content">
           <div class="sub-title cl-orange">Viết cho chúng tôi</div>
           <h4 class="address">Địa chỉ của chúng tôi</h4>
@@ -18,9 +18,9 @@
         </div>
       </div>
       <div class="col-md-6 offset-md-1 contactform mb-3">
-        <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
-          <div class="row h-100">
-            <div class="col-lg-7 form-content" style="align-self: center">
+        <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" class="w-100">
+          <div class="row h-100 w-100 m-0">
+            <div class="form-content" style="align-self: center">
               <div class="form-group mt-4">
                 <label class="mb-2">Họ tên*</label>
                 <input class="form-control" formControlName="username" />
@@ -78,7 +78,7 @@
         <h5 class="my-3">Liên hệ</h5>
         <div class="mb-5">Phone: 0971112222</div>
       </div>
-      <div class="col-md-3 ">
+      <div class="col-md-3">
         <img
           src="assets/contact/mail.png"
           alt=""
@@ -105,5 +105,7 @@
 <div class="success-message text-center my-5" *ngIf="isSend">
   <h1 class="cl-success">LIÊN HỆ THÀNH CÔNG!</h1>
   <h4>Chúng tôi sẽ phản hồi lại bạn trong thời gian ngắn nhất.</h4>
-  <div class="cl-back" [routerLink] = "['/home']"><i class='bx bx-arrow-back' style='color:#5799f2'  ></i>Quay lại trang chủ</div>
+  <div class="cl-back" [routerLink]="['/home']">
+    <i class="bx bx-arrow-back" style="color: #5799f2"></i>Quay lại trang chủ
+  </div>
 </div>

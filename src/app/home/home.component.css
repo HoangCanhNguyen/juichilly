@@ -1,6 +1,10 @@
-h1.banner-title {
+h1.title-without-sub {
   font-size: 4rem;
-  margin-bottom: 0rem;
+  color: var(--orange-light);
+}
+
+h1.title-with-sub {
+  font-size: 2rem;
   color: var(--orange-light);
 }
 
@@ -10,7 +14,6 @@ h1.banner-title {
 
 /* style juichilly-intro-banner */
 .juichilly-intro-banner .banner-content p {
-  font-size: 1.25rem;
   margin-bottom: 1.5rem;
 }
 
@@ -19,7 +22,6 @@ h1.banner-title {
   font-style: italic;
   font-weight: 500;
   color: var(--orange-light);
-  font-family: "Lora", serif;
 }
 
 /* style juichilly-about-banner */
@@ -32,7 +34,6 @@ h1.banner-title {
 }
 
 .juichilly-about-banner .banner-content p {
-  font-size: 1.25rem;
   margin-bottom: 2rem;
   color: var(--orange-light);
   text-align: justify;
@@ -100,9 +101,9 @@ h1.banner-title {
 }
 
 .order-now h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .order-now p {
@@ -121,10 +122,9 @@ h1.banner-title {
 }
 
 button.order-now-btn {
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: white;
-  padding: 1rem 1.5rem;
-  font-size: 1.25rem;
+  padding: 0.6rem 1.2rem;
   text-transform: uppercase;
   color: var(--orange-light);
   font-weight: 500;
@@ -199,22 +199,16 @@ img.decor.decor--bottomright {
 }
 
 @media (max-width: 576px) {
-  h1.banner-title {
+  h1.title-without-sub {
     font-size: 2rem;
-    margin-bottom: 0;
-  }
-
-  .juichilly-intro-banner .banner-content p,
-  .juichilly-about-banner .banner-content p {
-    font-size: 1rem;
-  }
-
-  .juichilly-intro-banner .banner-content p span {
-    font-size: 1.5rem;
   }
 
   .banner-content {
     text-align: center;
+  }
+
+  .juichilly-intro-banner .banner-content p span {
+    font-size: 1.25rem;
   }
 
   .col-lg-7 {
@@ -348,5 +342,9 @@ img.decor.decor--bottomright {
 
   .slide-show.pb-100 {
     padding-bottom: 1rem;
+  }
+
+  h1.title-with-sub {
+    font-size: 1.75rem;
   }
 }

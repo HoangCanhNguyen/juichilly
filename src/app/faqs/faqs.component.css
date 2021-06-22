@@ -59,4 +59,12 @@ h1.section__title::after {
   .faq-wrapper .container {
     margin-top: 135px;
   }
+
+  .faq .card .card-header {
+    padding: 1rem;
+  }
+
+  .faq .card .card-body {
+    padding: 0 1rem 1rem !important;
+  }
 }

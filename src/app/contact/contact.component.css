@@ -3,7 +3,7 @@ hr {
   margin: 0.5rem 0;
 }
 .line-break {
-  width: 60%
+  width: 60%;
 }
 
 .mt-13 {
@@ -22,19 +22,19 @@ hr {
 }
 
 .btn-orange {
-  background-color: #F99F33;
+  background-color: #f99f33;
 }
 
 .cl-orange {
-  color: #F99F33
+  color: #f99f33;
 }
 
 .cl-success {
-  color: #FF6200
+  color: #ff6200;
 }
 
 .cl-back {
-  color: #5799F2
+  color: #5799f2;
 }
 
 .cl-back:hover {
@@ -45,21 +45,21 @@ hr {
   border-radius: 0.75rem;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  background-color: #FAF7F7;
+  background-color: #faf7f7;
 }
 
 h4 {
-  color: #FF0000
+  color: #ff0000;
 }
 @media (max-width: 576px) {
   .message {
-    order:2;
+    order: 2;
   }
   .contactform {
-    order:1
+    order: 1;
   }
 
   .mt-13 {
-    margin-top: 5rem
+    margin-top: 2rem;
   }
 }
