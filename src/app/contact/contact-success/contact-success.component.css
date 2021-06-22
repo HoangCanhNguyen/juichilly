@@ -1,0 +1,19 @@
+.cl-orange {
+  color: #f99f33;
+}
+
+.cl-success {
+  color: #ff6200;
+}
+
+.cl-back {
+  color: #5799f2;
+}
+
+.cl-back:hover {
+  cursor: pointer;
+}
+
+h4 {
+  color: #ff0000;
+}

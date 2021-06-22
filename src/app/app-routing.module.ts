@@ -5,6 +5,7 @@ import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
 import { BlogListComponent } from './blog/blog-list/blog-list.component';
 import { CartComponent } from './cart/cart.component';
 import { CollectionComponent } from './collection/collection.component';
+import { ContactSuccessComponent } from './contact/contact-success/contact-success.component';
 import { ContactComponent } from './contact/contact.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { HomeComponent } from './home/home.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'contact-success', component: ContactSuccessComponent },
       { path: 'privacy', component: PrivacyComponent },
       { path: '404', component: NotFoundComponent },
       { path: 'about', component: AboutUsComponent },
