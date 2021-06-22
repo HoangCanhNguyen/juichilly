@@ -8,17 +8,20 @@
         width="90"
       />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navberHeader"
-      aria-controls="navberHeader"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
+    <i
+      class="bx bx-menu d-block d-lg-none"
+      (click)="showMobileMenu = true"
+      style="
+        font-size: 1.5rem;
+        color: var(--orange-light);
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: right;
+      "
+    ></i>
+
     <div class="collapse navbar-collapse" id="navberHeader">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
@@ -112,6 +115,167 @@
           </button>
         </li>
       </ul>
+    </div>
+
+    <div
+      class="mobile-menu-wrapper d-block d-lg-none"
+      [ngClass]="{ show: showMobileMenu }"
+    >
+      <i class="bx bx-x" (click)="showMobileMenu = false"></i>
+      <div class="main-menu">
+        <div
+          class="menu-item"
+          [routerLink]="['/home']"
+          (click)="showMobileMenu = false"
+        >
+          <i class="bx bx-home"></i>
+          <span>Trang chủ</span>
+        </div>
+
+        <div id="accordion">
+          <div class="card menu-item">
+            <div class="card-header p-0" id="headingOne">
+              <h5 class="mb-0">
+                <button
+                  class="btn p-0"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <div>
+                    <i class="bx bx-store-alt"></i>
+                    <span>Sản phẩm</span>
+                  </div>
+                  <i class="bx bx-chevron-down me-0"></i>
+                </button>
+              </h5>
+            </div>
+
+            <div
+              id="collapseOne"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordion"
+            >
+              <div class="card-body p-0">
+                <ul class="mobile-menu__dropdown">
+                  <li
+                    [routerLink]="['/product']"
+                    (click)="showMobileMenu = false"
+                  >
+                    Sản phẩm
+                  </li>
+                  <li
+                    [routerLink]="['/best-product']"
+                    (click)="showMobileMenu = false"
+                  >
+                    Sản phẩm nổi bật
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card menu-item">
+            <div class="card-header p-0" id="headingTwo">
+              <h5 class="mb-0">
+                <button
+                  class="btn p-0"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="true"
+                  aria-controls="collapseTwo"
+                >
+                  <div>
+                    <i class="bx bx-user"></i>
+                    <span>Về chúng tôi</span>
+                  </div>
+                  <i class="bx bx-chevron-down me-0"></i>
+                </button>
+              </h5>
+            </div>
+
+            <div
+              id="collapseTwo"
+              class="collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordion"
+            >
+              <div class="card-body p-0">
+                <ul class="mobile-menu__dropdown">
+                  <li
+                    [routerLink]="['/about']"
+                    (click)="showMobileMenu = false"
+                  >
+                    Về chúng tôi
+                  </li>
+                  <li
+                    [routerLink]="['/member']"
+                    (click)="showMobileMenu = false"
+                  >
+                    Đội ngũ
+                  </li>
+                  <li
+                    [routerLink]="['/member/daniel']"
+                    (click)="showMobileMenu = false"
+                  >
+                    Đội ngũ chi tiết
+                  </li>
+                  <li
+                    [routerLink]="['/collection']"
+                    (click)="showMobileMenu = false"
+                  >
+                    Bộ sưu tập
+                  </li>
+                  <li
+                    [routerLink]="['/privacy']"
+                    (click)="showMobileMenu = false"
+                  >
+                    Điều khoản và dịch vụ
+                  </li>
+                  <li
+                    [routerLink]="['/stop-plastic']"
+                    (click)="showMobileMenu = false"
+                  >
+                    Stop plastic
+                  </li>
+                  <li [routerLink]="['/404']" (click)="showMobileMenu = false">
+                    Erro Page 404
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="menu-item"
+          [routerLink]="['/blog']"
+          (click)="showMobileMenu = false"
+        >
+          <i class="bx bx-news"></i>
+          <span>Blog</span>
+        </div>
+
+        <div
+          class="menu-item"
+          [routerLink]="['/promotion']"
+          (click)="showMobileMenu = false"
+        >
+          <i class="bx bx-purchase-tag"></i>
+          <span>Khuyễn mãi</span>
+        </div>
+
+        <div
+          class="menu-item"
+          [routerLink]="['/faq']"
+          (click)="showMobileMenu = false"
+        >
+          <i class="bx bx-question-mark"></i>
+          <span>FAQs</span>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
