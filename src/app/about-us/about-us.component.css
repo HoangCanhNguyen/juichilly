@@ -60,6 +60,9 @@ h2 {
   bottom: 1rem;
   left: 19rem;
 }
+.thanks {
+  display: none;
+}
 
 @media (max-width: 576px) {
   .about.p-5 {
@@ -80,5 +83,23 @@ h2 {
 
   .mt-5rem {
     margin-top: 1rem !important;
+  }
+  .image-2,
+  .image-3,
+  .desc {
+    display: none;
+  }
+
+  .image-1 {
+    left: 0.5rem;
+  }
+
+  .example-content {
+    margin-top: 4rem;
+  }
+
+  .thanks {
+    display: block;
+    color: #528013;
   }
 }
