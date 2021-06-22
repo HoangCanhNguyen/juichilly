@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -9,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   isSend = false;
-  constructor() {}
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.contactForm = new FormGroup({
@@ -31,6 +32,6 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     console.log(this.contactForm.value);
-    this.isSend = true
+    this.router.navigate(['/contact-success']);
   }
 }

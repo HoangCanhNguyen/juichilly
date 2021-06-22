@@ -28,6 +28,12 @@
     <input type="text" placeholder="Số điện thoại *" class="form-control" />
     <input type="email" placeholder="Email *" class="form-control" />
     <textarea rows="5" class="form-control" placeholder="Tin nhắn"></textarea>
-    <button class="btn primary-btn w-100">Gửi tin nhắn</button>
+    <button
+      class="btn primary-btn w-100"
+      [routerLink]="['/contact-success']"
+      (click)="showChatbox = false"
+    >
+      Gửi tin nhắn
+    </button>
   </form>
 </div>

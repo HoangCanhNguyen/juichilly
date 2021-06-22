@@ -30,6 +30,7 @@ import { MemberComponent } from './member/member.component';
 import { MemberDetailComponent } from './member/member-detail/member-detail.component';
 import { StopPlasticComponent } from './stop-plastic/stop-plastic.component';
 import { PromotionComponent } from './promotion/promotion.component';
+import { ContactSuccessComponent } from './contact/contact-success/contact-success.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { PromotionComponent } from './promotion/promotion.component';
     MemberDetailComponent,
     StopPlasticComponent,
     PromotionComponent,
+    ContactSuccessComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SwiperModule, FormsModule, ReactiveFormsModule],
   providers: [],
