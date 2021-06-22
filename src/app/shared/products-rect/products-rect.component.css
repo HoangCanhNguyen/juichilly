@@ -54,6 +54,7 @@
 @media (max-width: 576px) {
   .cart-item img {
     width: 35%;
+    margin-bottom: 0;
   }
 
   .cart-item .bx-trash {

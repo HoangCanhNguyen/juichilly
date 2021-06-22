@@ -52,6 +52,7 @@
 .mobile-menu-wrapper .main-menu {
   width: 70%;
   height: 100%;
+  padding-top: 2rem;
   margin-left: auto;
   background-color: #fcf2ef;
   transform: translateX(100%);

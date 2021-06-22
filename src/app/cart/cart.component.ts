@@ -13,6 +13,7 @@ export class CartComponent implements OnInit, OnDestroy {
   cartEmpty: boolean;
   isOrderSuccess = false;
   totalItems = 0;
+  totalPrice = 0;
 
   cartSub: Subscription;
   cart = [];
@@ -25,6 +26,9 @@ export class CartComponent implements OnInit, OnDestroy {
 
       const itemAmountArr = this.cart.map((item: any) => item.amount);
       this.totalItems = itemAmountArr.reduce((a, b) => a + b, 0);
+
+      const priceArr = this.cart.map((item: any) => item.totalPrice);
+      this.totalPrice = priceArr.reduce((a, b) => a + b, 0)
 
       if (this.cart.length > 0) {
         this.cartEmpty = false;
