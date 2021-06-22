@@ -3,5 +3,6 @@
   right: 1rem;
   bottom: 1rem;
   display: flex;
+  z-index: 90;
   flex-direction: column;
 }
