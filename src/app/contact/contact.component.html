@@ -1,1 +1,109 @@
-<p>contact works!</p>
+<div *ngIf="!isSend">
+  <app-top-banner
+    [bannerTitle]="'Liên hệ'"
+    [heroImgUrl]="'assets/top-banner-images/orange-hero-img.png'"
+    [heroImgPosition]="'top'"
+  ></app-top-banner>
+
+  <div class="container mt-13 mb-5">
+    <div class="row">
+      <div class="col-md-4 offset-md-1 col-sm-12 message">
+        <div class="contact-content">
+          <div class="sub-title cl-orange">Viết cho chúng tôi</div>
+          <h4 class="address">Địa chỉ của chúng tôi</h4>
+          <div class="line-break">
+            <hr />
+          </div>
+          <img src="assets/contact/map.png" alt="" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col-md-6 offset-md-1 contactform mb-3">
+        <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+          <div class="row h-100">
+            <div class="col-lg-7 form-content" style="align-self: center">
+              <div class="form-group mt-4">
+                <label class="mb-2">Họ tên*</label>
+                <input class="form-control" formControlName="username" />
+              </div>
+              <div class="form-group mt-4">
+                <label class="mb-2">Email*</label>
+                <input class="form-control" formControlName="email" />
+              </div>
+              <div class="form-group mt-4">
+                <label class="mb-2">Số điện thoại*</label>
+                <input class="form-control" formControlName="phone" />
+              </div>
+              <div class="form-group mt-4">
+                <label class="mb-2">Bạn đang nghĩ gì?*</label>
+                <textarea
+                  class="form-control"
+                  formControlName="message"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div class="col-12 mt-4">
+                <div class="form-group">
+                  <button
+                    class="btn btn-orange text-light"
+                    [disabled]="contactForm.invalid"
+                  >
+                    Gửi tin nhắn
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row text-center mt-5">
+      <div class="col-md-3">
+        <img
+          src="assets/contact/address.png"
+          alt=""
+          class="img-fluid"
+          width="20%"
+        />
+        <h5 class="my-3">Địa chỉ</h5>
+        <div class="mb-5">120 Xuân Thủy, Cầu Giấy, Thành phố Hà Nội.</div>
+      </div>
+      <div class="col-md-3 mt-sm-3">
+        <img
+          src="assets/contact/phone.png"
+          alt=""
+          class="img-fluid"
+          width="20%"
+        />
+        <h5 class="my-3">Liên hệ</h5>
+        <div class="mb-5">Phone: 0971112222</div>
+      </div>
+      <div class="col-md-3 ">
+        <img
+          src="assets/contact/mail.png"
+          alt=""
+          class="img-fluid"
+          width="20%"
+        />
+        <h5 class="my-3">E-Mail</h5>
+        <div class="mb-5">Juicily.vn@gmail.com</div>
+      </div>
+      <div class="col-md-3 mt-sm-3">
+        <img
+          src="assets/contact/payment.png"
+          alt=""
+          class="img-fluid"
+          width="20%"
+        />
+        <h5 class="my-3">Thanh toán</h5>
+        <div>Thanh toán qua số tài khoản: 0123456789</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="success-message text-center my-5" *ngIf="isSend">
+  <h1 class="cl-success">LIÊN HỆ THÀNH CÔNG!</h1>
+  <h4>Chúng tôi sẽ phản hồi lại bạn trong thời gian ngắn nhất.</h4>
+  <div class="cl-back" [routerLink] = "['/home']"><i class='bx bx-arrow-back' style='color:#5799f2'  ></i>Quay lại trang chủ</div>
+</div>

@@ -1,0 +1,65 @@
+hr {
+  border: 1px solid #f68c29;
+  margin: 0.5rem 0;
+}
+.line-break {
+  width: 60%
+}
+
+.mt-13 {
+  margin-top: 13rem;
+}
+
+.form-control {
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-content {
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.btn-orange {
+  background-color: #F99F33;
+}
+
+.cl-orange {
+  color: #F99F33
+}
+
+.cl-success {
+  color: #FF6200
+}
+
+.cl-back {
+  color: #5799F2
+}
+
+.cl-back:hover {
+  cursor: pointer;
+}
+
+.contact-content {
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  background-color: #FAF7F7;
+}
+
+h4 {
+  color: #FF0000
+}
+@media (max-width: 576px) {
+  .message {
+    order:2;
+  }
+  .contactform {
+    order:1
+  }
+
+  .mt-13 {
+    margin-top: 5rem
+  }
+}
