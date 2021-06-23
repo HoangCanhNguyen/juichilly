@@ -7,7 +7,7 @@
 }
 
 .why-jui-wrapper .description p {
-  margin-inline: auto;
+  margin: 0 auto;
   margin-bottom: 0;
   width: min(580px, 100%);
 }

@@ -1,7 +1,6 @@
 h1.page-title {
   width: min(800px, 100%);
-  margin-inline: auto;
-  margin-bottom: 4rem;
+  margin: 0 auto 4rem auto;
   font-size: 2.5rem;
   color: var(--orange-light);
 }

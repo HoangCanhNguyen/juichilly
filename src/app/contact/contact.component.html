@@ -58,7 +58,11 @@
               </div>
               <div class="form-group mt-4">
                 <label class="mb-2">Số điện thoại*</label>
-                <input class="form-control" formControlName="phone" type="number"/>
+                <input
+                  class="form-control"
+                  formControlName="phone"
+                  type="number"
+                />
                 <div
                   class="text-small text-danger ml-5"
                   role="alert"
@@ -70,14 +74,12 @@
                   Hãy nhập số điện thoại
                 </div>
                 <div
-                class="text-small text-danger ml-5"
-                role="alert"
-                *ngIf="
-                  contactForm.controls.phone?.errors?.minlength
-                "
-              >
-                Hãy nhập số điện thoại hợp lệ
-              </div>
+                  class="text-small text-danger ml-5"
+                  role="alert"
+                  *ngIf="contactForm.controls.phone?.errors?.minlength"
+                >
+                  Hãy nhập số điện thoại hợp lệ
+                </div>
               </div>
               <div class="form-group mt-4">
                 <label class="mb-2">Bạn đang nghĩ gì?*</label>
@@ -87,15 +89,15 @@
                   rows="4"
                 ></textarea>
                 <div
-                class="text-small text-danger ml-5"
-                role="alert"
-                *ngIf="
-                  contactForm.controls.message?.errors?.required &&
-                  contactForm.controls.message?.touched
-                "
-              >
-                Bạn muốn nhắn gì cho chúng tôi?
-              </div>
+                  class="text-small text-danger ml-5"
+                  role="alert"
+                  *ngIf="
+                    contactForm.controls.message?.errors?.required &&
+                    contactForm.controls.message?.touched
+                  "
+                >
+                  Bạn muốn nhắn gì cho chúng tôi?
+                </div>
               </div>
               <div class="col-12 mt-4">
                 <div class="form-group">
@@ -113,44 +115,24 @@
       </div>
     </div>
 
-    <div class="row text-center mt-5">
+    <div class="row text-center pt-100 pb-100">
       <div class="col-md-3">
-        <img
-          src="assets/contact/address.png"
-          alt=""
-          class="img-fluid"
-          width="20%"
-        />
+        <i class="bx bx-map-alt"></i>
         <h5 class="my-3">Địa chỉ</h5>
-        <div class="mb-5">120 Xuân Thủy, Cầu Giấy, Thành phố Hà Nội.</div>
-      </div>
-      <div class="col-md-3 mt-sm-3">
-        <img
-          src="assets/contact/phone.png"
-          alt=""
-          class="img-fluid"
-          width="20%"
-        />
-        <h5 class="my-3">Liên hệ</h5>
-        <div class="mb-5">Phone: 0971112222</div>
+        <div>120 Xuân Thủy, Cầu Giấy, Thành phố Hà Nội.</div>
       </div>
       <div class="col-md-3">
-        <img
-          src="assets/contact/mail.png"
-          alt=""
-          class="img-fluid"
-          width="20%"
-        />
-        <h5 class="my-3">E-Mail</h5>
-        <div class="mb-5">Juicily.vn@gmail.com</div>
+        <i class="bx bx-phone"></i>
+        <h5 class="my-3">Liên hệ</h5>
+        <div>Phone: 0971112222</div>
       </div>
-      <div class="col-md-3 mt-sm-3">
-        <img
-          src="assets/contact/payment.png"
-          alt=""
-          class="img-fluid"
-          width="20%"
-        />
+      <div class="col-md-3">
+        <i class="bx bx-mail-send"></i>
+        <h5 class="my-3">E-Mail</h5>
+        <div>Juicily.vn@gmail.com</div>
+      </div>
+      <div class="col-md-3">
+        <i class="bx bx-money"></i>
         <h5 class="my-3">Thanh toán</h5>
         <div>Thanh toán qua số tài khoản: 0123456789</div>
       </div>
