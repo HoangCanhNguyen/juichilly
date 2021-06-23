@@ -13,8 +13,8 @@ export class ProductsRectComponent implements OnInit, OnDestroy {
   @Input() product: any;
   @Input() additionalClass: string;
 
-  itemAmount = 1;
-  totalPrice = 60000;
+  // itemAmount = 1;
+  // totalPrice = 60000;
 
   cartSub: Subscription;
   cart = [];
@@ -26,8 +26,8 @@ export class ProductsRectComponent implements OnInit, OnDestroy {
       this.cart = cart;
       const itemInCart = this.cart.find(item => item.product.title === this.product.title);
       if (itemInCart) {
-        this.itemAmount = itemInCart.amount;
-        this.totalPrice = itemInCart.totalPrice;
+        this.product.itemAmount = itemInCart.amount;
+        this.product.totalPrice = itemInCart.totalPrice;
       }
     })
   }
@@ -46,23 +46,23 @@ export class ProductsRectComponent implements OnInit, OnDestroy {
   }
 
   increaseByOne() {
-    this.itemAmount++;
-    this.totalPrice = this.itemAmount * this.product.price;
+    this.product.itemAmount++;
+    this.product.totalPrice = this.product.itemAmount * this.product.price;
 
     this.updateCart();
   }
 
   decreaseByOne() {
-    this.itemAmount--;
-    this.totalPrice = this.itemAmount * this.product.price;
+    this.product.itemAmount--;
+    this.product.totalPrice = this.product.itemAmount * this.product.price;
 
     this.updateCart()
   }
 
   updateCart(): void {
     const newItem = {
-      amount: this.itemAmount,
-      totalPrice: this.totalPrice,
+      amount: this.product.itemAmount,
+      totalPrice: this.product.totalPrice,
       product: this.product
     }
     this.cartService.addToCart(newItem);

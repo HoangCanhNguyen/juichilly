@@ -10,7 +10,7 @@
     <ng-template swiperSlide *ngFor="let product of products">
       <div>
         <img
-          [src]="product.imgUrl"
+          [src]="product.imgUrlSquare"
           alt=""
           class="img-fluid mb-20"
           width="70%"
@@ -34,25 +34,28 @@
         <div
           class="btn btn-radius text-light mb-10"
           [class]="product.button_color"
+          (click)="onAddingToCart(product)"
         >
-          Thêm vào giỏ - 60.000 đ
+          Thêm vào giỏ - {{ product.totalPrice | currency: " ":"code":"3.0" }} đ
         </div>
         <div class="add-cart">
           <i
             class="bx bxs-minus-circle bx-flip-vertical"
             [style]="product.add_button"
+            [ngClass]="{ disabled: product.itemAmount <= 1 }"
+            (click)="decreaseByOne(product)"
           ></i>
-          <span class="px-3">1</span>
+          <span class="px-3">{{ product.itemAmount }}</span>
           <i
             class="bx bxs-plus-circle bx-flip-vertical"
             [style]="product.add_button"
+            (click)="increaseByOne(product)"
           ></i>
         </div>
       </div>
     </ng-template>
   </swiper>
 </div>
-
 
 <div class="container text-center mobile">
   <swiper

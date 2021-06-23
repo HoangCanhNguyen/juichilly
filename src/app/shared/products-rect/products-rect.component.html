@@ -1,5 +1,5 @@
 <div class="product-rectangle desktop" [class]="additionalClass">
-  <img [src]="product.imgUrl" alt="" class="img-fluid mb-20" width="60%" />
+  <img [src]="product.imgUrlRect" alt="" class="img-fluid mb-20" width="60%" />
   <div class="product-info">
     <h5 class="product-title m-0" [class]="product.font_color">
       {{ product.title }}
@@ -16,16 +16,19 @@
       [class]="product.button_color"
       (click)="onAddingToCart()"
     >
-      Thêm vào giỏ - {{ totalPrice | currency: " ":"code":"3.0" }} đ
+      Thêm vào giỏ - {{ product.totalPrice | currency: " ":"code":"3.0" }} đ
     </div>
-    <p class="d-none">{{ totalPrice | currency: " ":"code":"3.0" }} đ</p>
+    <p class="d-none">
+      {{ product.totalPrice | currency: " ":"code":"3.0" }} đ
+    </p>
     <div class="add-cart d-flex justify-content-center align-items-center">
       <i
         class="bx bxs-minus-circle bx-flip-vertical"
         [style]="product.add_button"
+        [ngClass]="{ disabled: product.itemAmount <= 1 }"
         (click)="decreaseByOne()"
       ></i>
-      <span class="px-3">{{ itemAmount }}</span>
+      <span class="px-3">{{ product.itemAmount }}</span>
       <i
         class="bx bxs-plus-circle bx-flip-vertical"
         [style]="product.add_button"
