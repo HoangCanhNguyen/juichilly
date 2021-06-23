@@ -19,8 +19,13 @@ h2 {
 }
 
 .banner-content {
-  left: 23rem;
-  top: 9.5rem;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* .image-banner {
@@ -44,27 +49,17 @@ h2 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 hr {
   border: 1px solid #f68c29;
 }
 
-.btn {
-  margin-left: 7rem;
-}
-
 @media (max-width: 576px) {
   .sale-10 {
     font-size: 1.75rem;
   }
-
-  .banner-content {
-    left: 6rem;
-    top: 3.5rem;
-  }
-  
 
   .description {
     display: none;
@@ -77,11 +72,13 @@ hr {
   h1 {
     font-size: 1.75rem;
   }
-}
 
-@media (min-width: 1200px) and (max-width: 1500px) {
-  .banner-content {
-    left: 21rem !important;
-    top: 9.5rem !important;
+  .addtional-info {
+    text-align: center;
+  }
+
+  .line-break {
+    margin-top: 0;
+    margin-inline: auto;
   }
 }

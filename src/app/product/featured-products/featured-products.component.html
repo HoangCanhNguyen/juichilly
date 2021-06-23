@@ -42,17 +42,17 @@
       </div>
     </div>
   </div>
-  <div class="row text-center mt-50">
+  <div class="row text-center pt-100">
     <h5 class="cl-orange-light">Bạn cũng có thể thích</h5>
     <h2 class="mb-10">Các sản phẩm khác của Juichilly</h2>
-    <div class="col-md-3" *ngFor="let product of products">
+    <div class="col-md-3" *ngFor="let product of products | slice: 0:4">
       <app-products-rect [product]="product"></app-products-rect>
     </div>
-    <div class="slogan mt-40">
+    <div class="slogan pt-100 mb-4">
       <h2>Luôn đồng hành với những thay đổi tích cực</h2>
       <div class="jui-smile">#10.000_Juichilly_Smiles</div>
     </div>
-    <div class="col-md-4 offset-md-4 mt-40">
+    <div class="col-md-4 offset-md-4 pb-100">
       <img
         src="assets/product-list/devilery.png"
         alt=""
@@ -60,7 +60,7 @@
         width="100%"
       />
     </div>
-    <div class="pb-100 mt-5">
+    <div class="pb-100">
       <app-ad-banner></app-ad-banner>
     </div>
   </div>

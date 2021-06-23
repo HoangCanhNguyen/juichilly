@@ -17,7 +17,7 @@ export class ProductsSquareComponent implements OnInit {
   public products = [];
 
   breakpoints = {
-    0: { slidesPerView: 2, spaceBetween: 20 },
+    0: { slidesPerView: 1, spaceBetween: 0 },
     768: { slidesPerView: 3, spaceBetween: 30 },
   };
 
@@ -34,6 +34,7 @@ export class ProductsSquareComponent implements OnInit {
 
 
   increaseByOne(product: any) {
+    console.log('1 item added!');
     product.itemAmount++;
     product.totalPrice = product.itemAmount * product.price;
 
