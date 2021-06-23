@@ -19,18 +19,15 @@ export class ContactComponent implements OnInit {
       ]),
       email: new FormControl(null, [Validators.required, Validators.email]),
       phone: new FormControl(null, [
-        Validators.required,
-        Validators.minLength(6),
+        Validators.required
       ]),
       message: new FormControl(null, [
-        Validators.required,
-        Validators.minLength(6),
+        Validators.required
       ]),
     });
   }
 
   onSubmit() {
-    console.log(this.contactForm.value);
     this.router.navigate(['/contact-success']);
   }
 }

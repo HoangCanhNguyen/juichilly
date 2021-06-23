@@ -51,6 +51,12 @@ hr {
 h4 {
   color: #ff0000;
 }
+
+i.bx {
+  font-size: 6rem;
+  color: var(--orange-light);
+}
+
 @media (max-width: 576px) {
   .message {
     order: 2;

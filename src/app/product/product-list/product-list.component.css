@@ -78,7 +78,6 @@ hr {
   }
 
   .line-break {
-    margin-top: 0;
-    margin-inline: auto;
+    margin: 0 auto;
   }
 }
