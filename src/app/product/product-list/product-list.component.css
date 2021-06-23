@@ -19,31 +19,14 @@ h2 {
 }
 
 .banner-content {
-  left: 9rem;
-  top: 6.5rem;
+  left: 23rem;
+  top: 9.5rem;
 }
 
-.image-banner:hover img {
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.image-banner:hover .description {
-  opacity: 1;
-}
-
-.image-banner:hover .sale-10 {
-  opacity: 0;
-}
-
-.image-banner .description {
-  opacity: 0;
-}
-
-.image-banner {
+/* .image-banner {
   border: 1px solid rgb(19, 18, 18);
   border-radius: 60px;
-}
+} */
 
 .line-break {
   width: 55%;
@@ -74,21 +57,17 @@ hr {
 
 @media (max-width: 576px) {
   .sale-10 {
-    font-size: 40px;
+    font-size: 1.75rem;
   }
+
+  .banner-content {
+    left: 6rem;
+    top: 3.5rem;
+  }
+  
 
   .description {
     display: none;
-  }
-  .image-banner:hover .sale-10 {
-    opacity: 1;
-  }
-  .image-banner:hover img {
-    opacity: 1;
-  }
-  .banner-content {
-    left: 4rem;
-    top: 3.5rem;
   }
 
   .mt-100 {
@@ -97,5 +76,12 @@ hr {
 
   h1 {
     font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .banner-content {
+    left: 21rem !important;
+    top: 9.5rem !important;
   }
 }
