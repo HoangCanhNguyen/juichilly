@@ -75,6 +75,11 @@
               >
             </li>
             <li>
+              <a class="dropdown-item cl-pink" [routerLink]="'/become-partner'"
+                >Đối tác</a
+              >
+            </li>
+            <li>
               <a class="dropdown-item cl-pink" [routerLink]="'/collection'"
                 >Bộ sưu tập</a
               >
@@ -221,6 +226,12 @@
                     (click)="showMobileMenu = false"
                   >
                     Đội ngũ chi tiết
+                  </li>
+                  <li
+                    [routerLink]="['/become-partner']"
+                    (click)="showMobileMenu = false"
+                  >
+                    Đối tác
                   </li>
                   <li
                     [routerLink]="['/collection']"

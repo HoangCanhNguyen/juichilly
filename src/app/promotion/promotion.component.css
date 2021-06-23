@@ -42,7 +42,7 @@ h1.page-title {
 .top-banner-wrapper {
   background-color: var(--orange-light);
   position: relative;
-  height: 420px;
+  height: 320px;
 }
 
 .top-banner-wrapper h1 {
@@ -60,7 +60,7 @@ h1.page-title {
 }
 
 .top-banner-wrapper img {
-  max-width: 50%;
+  width: 500px;
   position: absolute;
 }
 
@@ -72,6 +72,13 @@ h1.page-title {
 .top-banner-wrapper img.bottom {
   bottom: 0;
   right: 0;
+}
+
+@media (max-width: 1500px) {
+  .top-banner-wrapper img {
+    width: 500px;
+    position: absolute;
+  }
 }
 
 @media (max-width: 576px) {
@@ -97,7 +104,7 @@ h1.page-title {
   }
 
   .top-banner-wrapper img {
-    max-width: 48%;
+    width: 45%;
   }
 
   .top-banner-wrapper h1 {

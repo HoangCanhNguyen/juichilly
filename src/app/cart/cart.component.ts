@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { CartService } from '../shared/services/cart.service';
@@ -8,7 +8,7 @@ import { CartService } from '../shared/services/cart.service';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit, OnDestroy {
+export class CartComponent implements OnInit, AfterViewInit, OnDestroy {
 
   cartEmpty: boolean;
   isOrderSuccess = false;
@@ -17,6 +17,10 @@ export class CartComponent implements OnInit, OnDestroy {
 
   cartSub: Subscription;
   cart = [];
+
+  voucherInput: string;
+  voucherMsg: string;
+  isVoucherCorrect = false;
 
   constructor(private cartService: CartService) { }
 
@@ -38,8 +42,26 @@ export class CartComponent implements OnInit, OnDestroy {
     })
   }
 
+  ngAfterViewInit(): void {
+
+  }
+
   ngOnDestroy(): void {
     this.cartSub.unsubscribe();
+  }
+
+  checkVoucher(event: any): void {
+    this.voucherInput = event.target.value;
+  }
+
+  applyVoucher(): void {
+    if (this.voucherInput === 'juichilly') {
+      this.voucherMsg = 'Áp dụng thành công! Bạn được giảm 50% giá trị đơn hàng';
+      this.isVoucherCorrect = true;
+    } else {
+      this.voucherMsg = 'Mã giảm giá không hợp lệ!'
+      this.isVoucherCorrect = false;
+    }
   }
 
   onOrderSuccess() {

@@ -1,5 +1,5 @@
 h1.title-without-sub {
-  font-size: 4rem;
+  font-size: 5rem;
   color: var(--orange-light);
 }
 
@@ -13,12 +13,20 @@ h1.title-with-sub {
 }
 
 /* style juichilly-intro-banner */
+.juichilly-intro-banner .banner-content {
+  position: absolute;
+  top: 50%;
+  width: min(500px, 100%);
+  transform: translateY(-50%);
+}
+
 .juichilly-intro-banner .banner-content p {
   margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .juichilly-intro-banner .banner-content p span {
-  font-size: 2rem;
+  font-size: 3rem;
   font-style: italic;
   font-weight: 500;
   color: var(--orange-light);
@@ -95,7 +103,7 @@ h1.title-with-sub {
 
 /* style order now section */
 .order-now {
-  background: url("../../assets/home/order-now-bg-img.jpg") center no-repeat;
+  background: url("../../assets/home/order-now-bg-img.png") center no-repeat;
   height: 850px;
   background-size: cover;
 }
@@ -117,7 +125,7 @@ h1.title-with-sub {
   color: red;
   font-weight: 500;
   margin-left: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   vertical-align: middle;
 }
 
@@ -198,6 +206,44 @@ img.decor.decor--bottomright {
   background-size: cover;
 }
 
+@media (max-width: 1500px) {
+  .order-now {
+    height: 550px;
+  }
+
+  img.center {
+    width: 85%;
+  }
+
+  .ingredient img {
+    width: 70%;
+  }
+
+  .ingredient.left-top {
+    left: 0;
+  }
+
+  .ingredient.left-center {
+    left: -230px;
+  }
+
+  .ingredient.left-bottom {
+    left: 0;
+  }
+
+  .ingredient.right-top {
+    right: 0;
+  }
+
+  .ingredient.right-center {
+    right: -230px;
+  }
+
+  .ingredient.right-bottom {
+    right: 0;
+  }
+}
+
 @media (max-width: 576px) {
   h1.title-without-sub {
     font-size: 2rem;
@@ -251,9 +297,10 @@ img.decor.decor--bottomright {
   }
 
   .order-now {
-    height: 400px;
+    height: 360px;
     position: relative;
     background-size: cover;
+    background-position: 5%;
   }
 
   .order-now .container {
@@ -346,5 +393,15 @@ img.decor.decor--bottomright {
 
   h1.title-with-sub {
     font-size: 1.75rem;
+  }
+
+  .banner-content {
+    top: unset !important;
+    transform: unset !important;
+    position: relative !important;
+  }
+
+  .juichilly-intro-banner .banner-content p {
+    font-size: 1rem;
   }
 }
