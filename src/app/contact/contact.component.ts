@@ -16,7 +16,6 @@ export class ContactComponent implements OnInit {
     this.contactForm = new FormGroup({
       username: new FormControl(null, [
         Validators.required,
-        Validators.minLength(6),
       ]),
       email: new FormControl(null, [Validators.required, Validators.email]),
       phone: new FormControl(null, [
