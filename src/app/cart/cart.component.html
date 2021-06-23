@@ -166,11 +166,22 @@
                       placeholder="Mã khuyễn mại / giảm giá"
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
+                      (keyup)="checkVoucher($event)"
                     />
-                    <span class="input-group-text" id="basic-addon2"
-                      >Áp dụng</span
+                    <button
+                      class="input-group-text btn"
+                      id="basic-addon2"
+                      [disabled]="!voucherInput"
+                      (click)="applyVoucher()"
                     >
+                      Áp dụng
+                    </button>
                   </div>
+                  <strong
+                    style="color: var(--orange-light)"
+                    *ngIf="voucherMsg"
+                    >{{ voucherMsg }}</strong
+                  >
                 </div>
 
                 <div class="mb-4 payment">
@@ -216,10 +227,35 @@
                   </div>
                 </div>
 
+                <div class="mb-2 total">
+                  <small>Tạm tính:</small>
+
+                  <small
+                    >{{ totalPrice | currency: " ":"code":"3.0" }} VNĐ</small
+                  >
+                </div>
+
+                <div class="mb-2 total" *ngIf="isVoucherCorrect">
+                  <small style="color: var(--orange-light)">Khuyến mãi:</small>
+
+                  <small style="color: var(--orange-light)"
+                    >-
+                    {{ totalPrice / 2 | currency: " ":"code":"3.0" }} VNĐ</small
+                  >
+                </div>
+
                 <div class="mb-4 total">
                   <span>Tổng cộng:</span>
 
-                  <span>{{ totalPrice | currency: " ":"code":"3.0" }} VNĐ</span>
+                  <span
+                    >{{
+                      (isVoucherCorrect
+                        ? totalPrice - totalPrice / 2
+                        : totalPrice
+                      ) | currency: " ":"code":"3.0"
+                    }}
+                    VNĐ</span
+                  >
                 </div>
 
                 <button

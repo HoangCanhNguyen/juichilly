@@ -56,7 +56,8 @@ h6 {
 }
 
 p,
-span {
+span,
+small {
   color: #707070;
 }
 
@@ -126,6 +127,13 @@ button:hover {
   /* color: inherit !important; */
 }
 
+.btn.disabled,
+.btn:disabled,
+fieldset:disabled .btn {
+  cursor: not-allowed !important;
+  pointer-events: all;
+}
+
 /* responsive font size using clamp() */
 h1 {
   font-size: clamp(2rem, 1.316rem + 1.9vw, 2.5rem);
@@ -145,11 +153,11 @@ h4 {
 
 /* utilities classes */
 .pt-100 {
-  padding-top: 70px;
+  padding-top: 6rem;
 }
 
 .pb-100 {
-  padding-bottom: 70px;
+  padding-bottom: 6rem;
 }
 
 .mb-10 {

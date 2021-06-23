@@ -157,12 +157,13 @@ span.blue-span {
   border-right: 0;
 }
 
-span#basic-addon2 {
+button#basic-addon2 {
   background: #ff6200;
   color: white;
   border: 1px solid #ff6200;
   border-radius: 0;
   padding-inline: 2rem;
+  cursor: pointer;
 }
 
 /* style payment method */

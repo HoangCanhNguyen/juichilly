@@ -1,9 +1,6 @@
 .jumbotron-fluid {
   background-color: rgba(163, 159, 159, 0.09);
 }
-.container-fluid {
-  font-size: 20px !important;
-}
 
 .cl-gray {
   color: #707070;
@@ -31,7 +28,7 @@ h3 {
 
 @media (max-width: 576px) {
   .mt-3rem {
-    margin-top:3rem
+    margin-top: 3rem;
   }
   .ml-sm-3rem {
     margin-left: 3rem;

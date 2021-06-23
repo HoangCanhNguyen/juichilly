@@ -1,4 +1,11 @@
 <section class="top-banner-wrapper" [style.height.px]="bannerHeight">
-  <h1>{{ bannerTitle }}</h1>
-  <img [src]="heroImgUrl" [alt]="bannerTitle" [class]="heroImgPosition" class="heroImg"/>
+  <div class="container h-100">
+    <h1>{{ bannerTitle }}</h1>
+    <img
+      [src]="heroImgUrl"
+      [alt]="bannerTitle"
+      [class]="heroImgPosition"
+      class="heroImg"
+    />
+  </div>
 </section>
