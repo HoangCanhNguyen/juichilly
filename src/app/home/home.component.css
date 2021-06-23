@@ -192,10 +192,11 @@ img.decor.decor--bottomright {
 .testi .testi-content {
   font-style: italic;
   font-weight: 500;
+  line-height: 2;
 }
 
 .testi .testi-content i {
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-style: italic;
 }
 
