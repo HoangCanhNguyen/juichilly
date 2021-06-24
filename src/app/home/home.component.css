@@ -15,7 +15,7 @@ h1.title-with-sub {
 /* style juichilly-intro-banner */
 .juichilly-intro-banner .banner-content {
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: min(500px, 100%);
   transform: translateY(-50%);
 }
