@@ -62,26 +62,75 @@
           <div class="col-lg-6">
             <div class="shipping-payment">
               <h1 class="title">Địa chỉ giao hàng</h1>
-              <form>
+              <form (onSubmit)="onOrderSuccess()" [formGroup]="orderForm">
                 <div class="mb-4">
                   <label for="name" class="form-label"
                     >Họ tên <span>*</span></label
                   >
-                  <input type="text" class="form-control" id="name" />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    formControlName="username"
+                  />
+                  <div
+                    class="text-small text-danger ml-5"
+                    role="alert"
+                    *ngIf="
+                      orderForm.controls.username?.errors?.required &&
+                      orderForm.controls.username?.touched
+                    "
+                  >
+                    Hãy nhập họ tên
+                  </div>
                 </div>
 
                 <div class="mb-4">
                   <label for="email" class="form-label"
                     >Email <span>*</span></label
                   >
-                  <input type="email" class="form-control" id="email" />
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    formControlName="email"
+                  />
+                  <div
+                    class="text-small text-danger ml-5"
+                    role="alert"
+                    *ngIf="
+                      orderForm.controls.email?.errors?.required &&
+                      orderForm.controls.email?.touched
+                    "
+                  >
+                    Hãy nhập email
+                  </div>
+                  <div
+                    class="text-small text-danger ml-5"
+                    role="alert"
+                    *ngIf="orderForm.controls.email?.errors?.email"
+                  >
+                    Hãy nhập email hợp lệ
+                  </div>
                 </div>
 
                 <div class="mb-4">
                   <label for="phone" class="form-label"
                     >Số điện thoại <span>*</span></label
                   >
-                  <input type="text" class="form-control" id="phone" />
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="phone"
+                    formControlName="phone"
+                  />
+                  <div
+                    class="text-small text-danger ml-5"
+                    role="alert"
+                    *ngIf="orderForm.controls.email?.errors?.email"
+                  >
+                    Hãy nhập số điện thoại hợp lệ
+                  </div>
                 </div>
 
                 <div class="mb-4 mb-lg-5">
@@ -93,7 +142,15 @@
                     id="address"
                     rows="5"
                     class="form-control"
+                    formControlName="address"
                   ></textarea>
+                  <div
+                    class="text-small text-danger ml-5"
+                    role="alert"
+                    *ngIf="orderForm.controls.address?.errors?.email"
+                  >
+                    Hãy nhập địa chỉ của bạn
+                  </div>
                 </div>
 
                 <div class="mb-5 accept-terms">
@@ -105,7 +162,11 @@
 
                   <label class="checkbox mb-3">
                     <span class="checkbox__input">
-                      <input type="checkbox" name="checkbox" />
+                      <input
+                        type="checkbox"
+                        name="checkbox"
+                        formControlName="policy"
+                      />
                       <span class="checkbox__control">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +195,11 @@
 
                   <label class="checkbox">
                     <span class="checkbox__input">
-                      <input type="checkbox" name="checkbox" />
+                      <input
+                        type="checkbox"
+                        name="checkbox"
+                        formControlName="promotion"
+                      />
                       <span class="checkbox__control">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -167,6 +232,7 @@
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       (keyup)="checkVoucher($event)"
+                      formControlName="promotion_code"
                     />
                     <button
                       class="input-group-text btn"
@@ -190,8 +256,10 @@
                       <input
                         class="form-check-input"
                         type="radio"
-                        name="radio"
+                        name="payment_method"
                         id="cod"
+                        value="cod"
+                        formControlName="payment_method"
                       />
                       <label class="form-check-label" for="cod">
                         Thanh toán khi nhận hàng (COD)
@@ -207,8 +275,10 @@
                       <input
                         class="form-check-input"
                         type="radio"
-                        name="radio"
+                        name="payment_method"
                         id="banking"
+                        value="banking"
+                        formControlName="payment_method"
                       />
                       <label class="form-check-label" for="banking">
                         Chuyển khoản qua ngân hàng
@@ -261,7 +331,8 @@
                 <button
                   type="submit"
                   class="btn place-order-btn w-100 mb-3"
-                  (click)="onOrderSuccess()"
+                  [disabled]= "orderForm.invalid"
+                  (click) = "onOrderSuccess()"
                 >
                   HOÀN TẤT ĐẶT HÀNG
                 </button>

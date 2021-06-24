@@ -40,7 +40,7 @@ export class CartService {
       id: 'a3',
       imgUrlSquare: "/assets/images/oranges.png",
       imgUrlRect:
-        'assets/product-square/190591659_973929896714050_4149720283071173334_n.png',
+        'assets/product-square/194272926_4273789872652321_2119853971890393768_n.png',
       title: "Cam",
       description: "+ Bổ sung Vitamin",
       rating_amount: 23,
