@@ -22,7 +22,7 @@ export class CartComponent implements OnInit, AfterViewInit, OnDestroy {
   voucherInput: string;
   voucherMsg: string;
   isVoucherCorrect = false;
-  
+
   orderForm: FormGroup;
 
   constructor(private cartService: CartService) {
@@ -31,12 +31,12 @@ export class CartComponent implements OnInit, AfterViewInit, OnDestroy {
       email: new FormControl(null, [Validators.required, Validators.email]),
       phone: new FormControl(null, [Validators.required]),
       address: new FormControl(null, [Validators.required]),
-      policy: new FormControl(null, [Validators.required]),
+      policy: new FormControl(null),
       promotion: new FormControl(null),
       promotion_code: new FormControl(null),
       payment_method: new FormControl(null, [Validators.required])
     })
-   }
+  }
 
   ngOnInit(): void {
     this.cartSub = this.cartService.cart$.subscribe(cart => {

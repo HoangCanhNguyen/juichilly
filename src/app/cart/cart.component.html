@@ -147,7 +147,10 @@
                   <div
                     class="text-small text-danger ml-5"
                     role="alert"
-                    *ngIf="orderForm.controls.address?.errors?.email"
+                    *ngIf="
+                      orderForm.controls.address?.errors?.required &&
+                      orderForm.controls.address?.touched
+                    "
                   >
                     Hãy nhập địa chỉ của bạn
                   </div>
@@ -331,8 +334,8 @@
                 <button
                   type="submit"
                   class="btn place-order-btn w-100 mb-3"
-                  [disabled]= "orderForm.invalid"
-                  (click) = "onOrderSuccess()"
+                  [disabled]="orderForm.invalid"
+                  (click)="onOrderSuccess()"
                 >
                   HOÀN TẤT ĐẶT HÀNG
                 </button>
