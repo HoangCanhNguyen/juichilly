@@ -102,12 +102,6 @@ p:focus {
   box-shadow: none !important;
 }
 
-input:focus,
-textarea:focus {
-  box-shadow: none !important;
-  outline: none !important;
-}
-
 /* list styles */
 ul {
   padding: 0;
